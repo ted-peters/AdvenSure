@@ -31,5 +31,5 @@ app.use(routes);
 
 // .listen() function to run your domain name = advensure.com || advensure.herokuapp.com || advensure.github.io || localhost:3001
 app.listen(process.env.PORT || 3001, function(){
-    console.log('Express Server Listining on 3001');
+    console.log('Express Server Listening on 3001');
 })
