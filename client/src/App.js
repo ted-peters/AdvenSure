@@ -7,10 +7,12 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Nav from './comp/Nav'
+import Footer from './comp/Footer/Footer'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Signup from './pages/SignUp'
 import Weather from './pages/Weather'
+import UserPage from './pages/UserPage'
 
 export default function App() {
   return (
@@ -23,6 +25,9 @@ export default function App() {
         </Route>
         <Route path="/signup">
           <Signup />
+        </Route>
+        <Route path="/profile">
+          <UserPage />
         </Route>
         <Route path="/weather">
           <Weather city="Houston"/>
