@@ -24,7 +24,9 @@ export default function Weather() {
  */
 import React, { Component } from 'react'
 import Temp from '../comp/Temp' 
+import WeatherCard from '../comp/WeatherCard' 
 import axios from 'axios'
+
 
 const APIKey = "68498a4d04f4da5284313a372d17c548";
 
@@ -58,6 +60,7 @@ export default class Weather extends Component {
                     <div className="container">
                         <div className="row">
                             <Temp date="12/1/2020" icon="sunny" temp="50" humidity="20" />
+                            <WeatherCard />
                         </div>
                     </div>
                 </div>
