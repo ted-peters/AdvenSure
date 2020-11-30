@@ -1,32 +1,51 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import Axios from 'axios';
 
-const Example = (props) => {
+const UserSignUp = () => {
+  const [registerUsername, setRegisterUsername] = useState("");
+  const [registerEmail, setRegisterEmail] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
+
+  const register = () => {
+    Axios({
+      method: "POST",
+      data: {
+        name: registerUsername,
+        email: registerEmail,
+        password: registerPassword,
+      },
+      withCredentials: true,
+      url: "http://localhost:3001/signup"
+    }).then((res) => console.log(res));
+  };
+
   return (
     <Form>
       <Row form>
         <Col md={6}>
           <FormGroup>
-            <Label for="examplename">Name</Label>
-            <Input type="name" name="name" id="examplename" placeholder="with a placeholder" />
+            <Label for="name">SignUp</Label>
+            <Input type="name" id="usernameid" placeholder="username" onChange={(e)=> setRegisterUsername(e.target.value)} />
           </FormGroup>
         </Col>
         <Col md={6}>
           <FormGroup>
             <Label for="exampleEmail">Email</Label>
-            <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+            <Input type="email" id="emailid" placeholder="email" onChange={(e)=> setRegisterEmail(e.target.value)} />
+
           </FormGroup>
         </Col>
         <Col md={6}>
           <FormGroup>
             <Label for="examplePassword">Password</Label>
-            <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+            <Input type="password" id="passwordid" placeholder="password"onChange={(e)=> setRegisterPassword(e.target.value)} />
           </FormGroup>
         </Col>
       </Row>
-      <Button>Sign in</Button>
+      <Button OnClick = {register}>Submit New Registration</Button>
     </Form>
   );
 }
 
-export default Example;
+export default UserSignUp;
