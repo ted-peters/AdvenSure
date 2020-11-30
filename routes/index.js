@@ -2,6 +2,7 @@
 const path= require('path');
 // express router
 const router = require('express').Router();
+const passport = require("passport");
 //link api
 
 router.use(function(req, res){
