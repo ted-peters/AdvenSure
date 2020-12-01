@@ -4,19 +4,17 @@ import Axios from 'axios';
 
 const UserSignUp = () => {
   const [registerUsername, setRegisterUsername] = useState("");
-  const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
 
   const register = () => {
     Axios({
       method: "POST",
       data: {
-        name: registerUsername,
-        email: registerEmail,
+        username: registerUsername,
         password: registerPassword,
       },
       withCredentials: true,
-      url: "http://localhost:3001/signup"
+      url: "http://localhost:3001"
     }).then((res) => console.log(res));
   };
 
@@ -27,13 +25,6 @@ const UserSignUp = () => {
           <FormGroup>
             <Label for="name">Display Name</Label>
             <Input type="name" id="usernameid" placeholder="username" onChange={(e)=> setRegisterUsername(e.target.value)} />
-          </FormGroup>
-        </Col>
-        <Col md={12}>
-          <FormGroup>
-            <Label for="exampleEmail">Email</Label>
-            <Input type="email" id="emailid" placeholder="email" onChange={(e)=> setRegisterEmail(e.target.value)} />
-
           </FormGroup>
         </Col>
         <Col md={12}>
