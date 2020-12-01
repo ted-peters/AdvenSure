@@ -26,7 +26,7 @@ export default function App() {
           <Signup />
         </Route>
         <Route path="/weather">
-          <Weather city="Houston"/>
+          <Weather />
         </Route>
         <Route path="/">
           <Home />
