@@ -21,22 +21,22 @@ const UserSignUp = () => {
   };
 
   return (
-    <Form>
+    <Form className ="signupForm">
       <Row form>
-        <Col md={6}>
+        <Col md={12}>
           <FormGroup>
-            <Label for="name">SignUp</Label>
+            <Label for="name">Display Name</Label>
             <Input type="name" id="usernameid" placeholder="username" onChange={(e)=> setRegisterUsername(e.target.value)} />
           </FormGroup>
         </Col>
-        <Col md={6}>
+        <Col md={12}>
           <FormGroup>
             <Label for="exampleEmail">Email</Label>
             <Input type="email" id="emailid" placeholder="email" onChange={(e)=> setRegisterEmail(e.target.value)} />
 
           </FormGroup>
         </Col>
-        <Col md={6}>
+        <Col md={12}>
           <FormGroup>
             <Label for="examplePassword">Password</Label>
             <Input type="password" id="passwordid" placeholder="password"onChange={(e)=> setRegisterPassword(e.target.value)} />

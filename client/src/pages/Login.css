@@ -1,0 +1,14 @@
+.login{
+text-align: center;
+}
+
+.loginForm{
+    justify-content: center;
+}
+
+.loginHeader{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: large;
+}

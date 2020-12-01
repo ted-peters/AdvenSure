@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import Axios from "axios";
+import '../pages/Login.css'
+
 
 function UserLogin() {
   const [loginUsername, setLoginEmail] = useState("");
@@ -30,7 +32,7 @@ function UserLogin() {
   };
   return (
     <>
-      <Form inline>
+      <Form className="loginForm" inline>
         <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
           <Label for="exampleEmail" className="mr-sm-2">Email</Label>
           <Input type="email" name="email" id="exampleEmail" placeholder="Email" onChange={(e) => setLoginEmail(e.target.value)} />
@@ -41,11 +43,11 @@ function UserLogin() {
         </FormGroup>
         <Button onClick={login}>Login</Button>
       </Form>
-      <div>
+      {/* <div>
         <h1>Get User</h1>
         <button onClick={getUser}>Submit</button>
         {data ? <h1>Welcome Back {data.username}</h1> : null}
-      </div>
+      </div> */}
     </>
   );
 }
