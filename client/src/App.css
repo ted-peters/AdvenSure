@@ -1,0 +1,9 @@
+tr{
+    border: 2px solid gray;
+}
+thead{
+    background-color: rgb(127, 127, 212);
+}
+th{
+    border: 2px solid gray;
+}
