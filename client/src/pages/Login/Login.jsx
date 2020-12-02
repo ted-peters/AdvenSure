@@ -30,7 +30,7 @@ function Login() {
   //   });
   // };
   return (
-    <div>
+    <div className="loginBody">
       <Row>
           <Card className="card" body inverse style={{ backgroundColor: '#ff55', borderColor: '#f1f5' }}>
             <CardTitle className="font">Welcome Back</CardTitle>

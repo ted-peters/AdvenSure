@@ -19,7 +19,7 @@ function Register() {
   };
   
   return (
-    <div>
+    <div className="container">
     <Row>
           <Card className="card" body inverse style={{ backgroundColor: '#ff55', borderColor: '#f1f5' }}>
             <CardTitle className="font">Register Here</CardTitle>
