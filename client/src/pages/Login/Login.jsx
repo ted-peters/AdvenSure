@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Axios from "axios";
+import axios from "axios";
 import {Row, Input, Button, Card, CardTitle,} from "reactstrap";
 import './Login.css'
 
@@ -8,16 +8,29 @@ function Login() {
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [data, setData] = useState(null);
+
   const login = () => {
-    Axios({
+    axios({
       method: "POST",
       data: {
         username: loginUsername,
         password: loginPassword,
       },
       withCredentials: true,
-      url: "http://localhost:3001/login",
-    }).then((res) => console.log(res));
+      url: "/api/login",
+    })
+  };
+
+  const logout = () => {
+    axios({
+      method:"GET",
+      data: {
+        username: loginUsername,
+        password: loginPassword,
+      },
+      withCredentials: false,
+      url: "/api/logout",
+    })
   };
   // const getUser = () => {
   //   Axios({
@@ -44,7 +57,8 @@ function Login() {
               placeholder="password"
               onChange={(e) => setLoginPassword(e.target.value)}
             />
-            <Button className="button" onClick={login}>Login</Button>
+            <Button className="button" onClick= {login}>Login</Button>
+          <Button className="button" onClick= {logout}>Logout</Button>
           </Card>
       </Row>
       {/* <Row>

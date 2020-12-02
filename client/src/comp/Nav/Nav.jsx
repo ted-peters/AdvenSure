@@ -59,6 +59,13 @@ function Nav() {
                           className={window.location.pathname === "/register" ? "nav-link active" : "nav-link"}
                       >Sign Up</Link>
                   </li>
+                  <li className="nav-item">
+                    
+                    <Link
+                        to="/logout"
+                        className={window.location.pathname === "/logout" ? "nav-link active" : "nav-link"}
+                    > Logout</Link>
+                </li>
               </ul>
           </div>
       </nav>

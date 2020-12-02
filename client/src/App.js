@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from "react-router-dom";
 import "./App.css"
+import axios from 'axios';
 import Nav from './comp/Nav/Nav'
 import Footer from './comp/Footer/Footer'
 import Home from './pages/Home'
@@ -12,16 +14,35 @@ import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Weather from './pages/Weather'
 import Checklist from './pages/checklist/CheckList'
-
+import {useAuth, actions} from "./utils/authState"
 
 export default function App() {
+    const [authState, authDispatch] = useAuth();
+    useEffect(() => {
+        axios.get("/api/user").then((response) => {
+            authDispatch({
+                type: actions.LOGIN,
+                // displayName: response.data.displayName,
+                // userId: response.data.id
+            })
+        }).catch(err => {
+            authDispatch({
+                type: actions.LOGOUT,
+            })
+        })
+    }, []);
+
   return (
     <Router>{/* This is for creacting all application as a router app */}
     <div>
       <Nav />
-      <Switch>{/* Switch decide which path your component */}
-        <Route path="/login">{/* Create a route using path */}
-          <Login />{/* Show component for that path */}
+      <Switch>
+        <Route path="/login">
+          {
+            !authState.isLoggedIn
+            ?<Login />
+            :<Redirect to={"/"} />
+          }
         </Route>
         <Route path="/register">
           <Register />
@@ -32,7 +53,7 @@ export default function App() {
         <Route path="/weather">
           <Weather city="Houston"/>
         </Route>
-        <Route path="/">
+        <Route path="/" >
           <Home />
         </Route>
       </Switch>

@@ -1,3 +1,7 @@
+import React, {useReducer, useContext} from "react"
+
+
+
 // /utils/AuthState
 const AuthContext = React.createContext({
     isLoggedIn: false,
@@ -13,13 +17,13 @@ function authReducer(authState, action){
         case LOGIN:
             return {
                 isLoggedIn: true,
-                displayName: action.data.displayName,
-                userId: action.data.userId
+                // displayName: action.data.displayName,
+                // userId: action.data.userId
             }
         case LOGOUT:
             return {
                 isLoggedIn: false,
-                displayName: ""
+                // displayName: ""
             }
             break;
         default:
