@@ -8,7 +8,11 @@ const userSchema = new Schema({
   },
   email: {
     type: String,
-    required: true
+    required: true,
+    validate: {
+      validator: () => Promise.resolve(false),
+      message: "Please enter a valid email address"
+    }
   },
   password: {
     type: String, 
@@ -19,5 +23,15 @@ const userSchema = new Schema({
     default: Date.now
   }
 });
+
+const User = db.model("User", userSchema);
+const user = new User();
+
+user.email = "test@test.com";
+user.name = "test";
+user.validate().catch(error => {
+  assert.ok(error);
+  assert.equal(error.errors["email"].message, "Please enter a valid email address")
+})
 
 module.exports = User = mongoose.model("Users", userSchema);
