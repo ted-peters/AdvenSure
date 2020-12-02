@@ -33,7 +33,7 @@ function Register() {
               placeholder="password"
               onChange={(e) => setRegisterPassword(e.target.value)}
             />
-            <Button className="button" onClick={Register}>Login</Button>
+            <Button className="button" onClick={register}>Login</Button>
           </Card>
       </Row>
       </div>
