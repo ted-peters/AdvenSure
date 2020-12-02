@@ -8,13 +8,14 @@ const bcrypt = require("bcryptjs");
 const session = require("express-session");
 const bodyParser = require("body-parser");
 const User = require("./models/user");
+const router = require("./routes");
 const app = express();
 require('dotenv').config();
-const routes = require('./routes');
+// const routes = require('./routes');
 //----------------------------------------- END OF IMPORTS---------------------------------------------------
 
 // .connect() function to connect either mongodb.com/atlas or localhost mongo database
-mongoose.connect(process.env.MONGODBURL || "mongodb://localhost/advensure", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODBURL || "mongodb://localhost/AdvenSure", { useNewUrlParser: true, useUnifiedTopology: true });
 // to check status of your mongodb connection
 mongoose.connection.on('connected', function () { console.log("Mongo DB connected") });
 mongoose.connection.on('error', function (err) { console.error(err) });
@@ -44,7 +45,7 @@ app.use(
 app.use(cookieParser("secretcode"));
 app.use(passport.initialize());
 app.use(passport.session());
-require("./passport/setup.js")(passport);
+require("./passport/passportConfig.js")(passport);
 
 //----------------------------------------- END OF MIDDLEWARE---------------------------------------------------
 
@@ -72,7 +73,6 @@ app.post("/register", (req, res) => {
 
       const newUser = new User({
         username: req.body.username,
-        email: req.body.email,
         password: hashedPassword,
       });
       await newUser.save();
@@ -85,7 +85,7 @@ app.get("/user", (req, res) => {
 });
 
 // express using router function which exporting from routes folder
-app.use(routes);
+app.use(router);
 //----------------------------------------- END OF ROUTES---------------------------------------------------
 //Start Server
 // .listen() function to run your domain name = advensure.com || advensure.herokuapp.com || advensure.github.io || localhost:3001
