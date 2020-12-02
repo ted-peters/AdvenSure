@@ -12,6 +12,7 @@ import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Weather from './pages/Weather'
 import Checklist from './pages/checklist/CheckList'
+import UserPage from './pages/UserPage'
 
 
 export default function App() {
@@ -31,6 +32,9 @@ export default function App() {
         </Route>
         <Route path="/weather">
           <Weather city="Houston"/>
+        </Route>
+        <Route path="/user">
+          <UserPage />
         </Route>
         <Route path="/">
           <Home />
