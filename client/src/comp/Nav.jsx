@@ -18,7 +18,7 @@ const Example = (props) => {
               <NavLink href="/login">Login</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/signup">Sign Up</NavLink>
+              <NavLink href="/register">Sign Up</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

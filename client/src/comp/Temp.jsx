@@ -1,17 +1,21 @@
-import React from 'react'
+import React from 'react';
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+  } from 'reactstrap';
 
 export default function Temp(props) {
     return (
-        <div className="col-sm-12 col-md-6 col-lg-4 py-2">
-            <div className="container">
-                <div className="row">
-                    <div className="col-4"></div>
-                    <div className="col-8 bg-danger p-2">{props.date}</div>
-                    <div className="col-4 bg-light p-1">{props.icon}</div>
-                    <div className="col-4 bg-success p-1">{props.temp}</div>
-                    <div className="col-4 bg-info p-1">{props.humidity}</div>
-                </div>
-            </div>
-        </div>
+        <div>
+      <Card>
+        
+        <CardBody>
+          <CardTitle tag="h5">{props.date}</CardTitle>
+          <CardSubtitle tag="h6" className="mb-2 text-muted">{props.temp}</CardSubtitle>
+          {/* <CardText><img src={props.icon}/> </CardText> */}
+          
+        </CardBody>
+      </Card>
+    </div>
     )
 }
