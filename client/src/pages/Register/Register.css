@@ -1,0 +1,26 @@
+.card {
+    text-align: center;
+    font-size: medium;
+    margin-left: 30%;
+    margin-right: 30%;
+    color: black;
+}
+.font{
+    font-size: large;
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+}
+
+.button {
+    color:black;
+    background-color: cadetblue;
+    margin-top: 10px;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.input {
+    width: 100%;
+    margin-top: 10px;
+}
