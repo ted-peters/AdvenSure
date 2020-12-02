@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import Temp from '../comp/Temp'; 
+import Temp from '../../comp/Temp'; 
 import axios from 'axios';
 
 
