@@ -8,10 +8,10 @@ import './App.css';
 import Nav from './comp/Nav'
 import Footer from './comp/Footer/Footer'
 import Home from './pages/Home'
-import Login from './pages/Login'
-import Signup from './pages/SignUp'
+import Login from './pages/Login/Login'
+import Register from './pages/Register/Register'
 import Weather from './pages/Weather'
-import UserPage from './pages/UserPage'
+
 
 export default function App() {
   return (
@@ -22,11 +22,8 @@ export default function App() {
         <Route path="/login">{/* Create a route using path */}
           <Login />{/* Show component for that path */}
         </Route>
-        <Route path="/signup">
-          <Signup />
-        </Route>
-        <Route path="/profile">
-          <UserPage />
+        <Route path="/register">
+          <Register />
         </Route>
         <Route path="/weather">
           <Weather city="Houston"/>
