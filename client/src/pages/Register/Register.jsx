@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Axios from "axios";
+import axios from "axios";
 import {Container, Row, Input, Button, Card, CardTitle, CardText } from "reactstrap";
 import './Register.css';
 import {Link} from "react-router-dom";
@@ -8,15 +8,15 @@ function Register() {
   const [registerUsername, setRegisterUsername] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const register = () => {
-    Axios({
+    axios({
       method: "POST",
       data: {
         username: registerUsername,
         password: registerPassword,
       },
       withCredentials: true,
-      url: "http://localhost:3001/register",
-    }).then((res) => console.log(res));
+      url: "/api/register",
+    })
   };
   
   return (
@@ -41,7 +41,7 @@ function Register() {
               placeholder="password"
               onChange={(e) => setRegisterPassword(e.target.value)}
             />
-            <Button className="button" onClick={Register}>Login</Button>
+            <Button className="button" onClick={register}>Login</Button>
           </Card>
       </Row>
       <p className="text-center">If you already have a log in information, please <Link to="/login">Log In</Link></p>

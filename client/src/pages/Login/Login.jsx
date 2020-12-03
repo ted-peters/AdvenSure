@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import Axios from "axios";
+
+import axios from "axios";
 import {Link} from "react-router-dom";
+
 import {Row, Input, Button, Card, CardTitle,} from "reactstrap";
 import './Login.css'
 
@@ -8,28 +10,19 @@ import './Login.css'
 function Login() {
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
-  const [data, setData] = useState(null);
+
   const login = () => {
-    Axios({
+    axios({
       method: "POST",
       data: {
         username: loginUsername,
         password: loginPassword,
       },
       withCredentials: true,
-      url: "http://localhost:3001/login",
-    }).then((res) => console.log(res));
+      url: "/api/login",
+    })
   };
-  // const getUser = () => {
-  //   Axios({
-  //     method: "GET",
-  //     withCredentials: true,
-  //     url: "http://localhost:3001/user",
-  //   }).then((res) => {
-  //     setData(res.data);
-  //     console.log(res.data);
-  //   });
-  // };
+
   return (
     <div className="loginBody">
       <div className="container text-center">
@@ -55,9 +48,10 @@ function Login() {
               placeholder="password"
               onChange={(e) => setLoginPassword(e.target.value)}
             />
-            <Button className="button" onClick={login}>Login</Button>
+            <Button className="button" onClick= {login}>Login</Button>
           </Card>
       </Row>
+
       </div>  
       <p className="text-center">If you have not sign up, please <Link to="/register">Sign Up</Link></p>
       {/* <Row>
@@ -69,6 +63,7 @@ function Login() {
           </Card>
         </Container>
       </Row> */}
+
     </div>
   );
 }
