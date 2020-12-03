@@ -7,10 +7,10 @@ import {
 import './App.css';
 import Nav from './comp/Nav'
 import Footer from './comp/Footer/Footer'
-import Home from './pages/Home'
+import Home from './pages/Home/Home'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
-import Weather from './pages/Weather'
+import Weather from './pages/UserPage/Weather'
 
 
 export default function App() {
@@ -32,6 +32,7 @@ export default function App() {
           <Home />
         </Route>
       </Switch>
+      
       <Footer />
     </div>
     </Router>

@@ -24,14 +24,14 @@ const userSchema = new Schema({
   }
 });
 
-const User = db.model("User", userSchema);
-const user = new User();
+// const User = db.model("User", userSchema);
+// const user = new User();
 
-user.email = "test@test.com";
-user.name = "test";
-user.validate().catch(error => {
-  assert.ok(error);
-  assert.equal(error.errors["email"].message, "Please enter a valid email address")
-})
+// user.email = "test@test.com";
+// user.name = "test";
+// user.validate().catch(error => {
+//   assert.ok(error);
+//   assert.equal(error.errors["email"].message, "Please enter a valid email address")
+// })
 
 module.exports = User = mongoose.model("Users", userSchema);
