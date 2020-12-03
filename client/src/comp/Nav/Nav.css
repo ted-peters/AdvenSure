@@ -1,0 +1,26 @@
+nav {
+    background-color: rgb(73, 123, 182, 0.8);
+    
+}
+
+a {
+    text-decoration: none;
+    color: #514E7E
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffed86
+}
+
+.navbar-brand {
+    font-size: 35px;
+}
+
+.nav-link, .nav-item {
+    font-size: 25px;
+    color: #514E7E
+}
+.mr-auto, .navbar-brand {
+    color: #514E7E
+}
