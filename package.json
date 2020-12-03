@@ -43,6 +43,15 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "if-env": "^1.0.4",
+    "is-empty": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.1",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "validator": "^13.5.1"
+  },
+  "devDependencies": {
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.32",
     "mongoose": "^5.10.18",

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { Container, Row } from 'reactstrap';
 import { Button, Form, FormGroup, Input, Table, Nav, Dropdown, DropdownItem, DropdownToggle, DropdownMenu } from 'reactstrap';
 
-
+import "./Checklist.css"
 
 export default function CheckList() {
     const[list,setList]=useState([]) 
