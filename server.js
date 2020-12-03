@@ -8,13 +8,14 @@ const bcrypt = require("bcryptjs");
 const session = require("express-session");
 const bodyParser = require("body-parser");
 const User = require("./models/user");
+const router = require("./routes");
 const app = express();
 require('dotenv').config();
-const routes = require('./routes');
+// const routes = require('./routes');
 //----------------------------------------- END OF IMPORTS---------------------------------------------------
 
 // .connect() function to connect either mongodb.com/atlas or localhost mongo database
-mongoose.connect(process.env.MONGODBURL || "mongodb://localhost/advensure", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODBURL || "mongodb://localhost/AdvenSure", { useNewUrlParser: true, useUnifiedTopology: true });
 // to check status of your mongodb connection
 mongoose.connection.on('connected', function () { console.log("Mongo DB connected") });
 mongoose.connection.on('error', function (err) { console.error(err) });
@@ -44,12 +45,12 @@ app.use(
 app.use(cookieParser("secretcode"));
 app.use(passport.initialize());
 app.use(passport.session());
-require("./passport/setup.js")(passport);
+require("./passport/passportConfig.js")(passport);
 
 //----------------------------------------- END OF MIDDLEWARE---------------------------------------------------
 
 // Routes
-app.post("/login", (req, res, next) => {
+app.post("/api/login", (req, res, next) => {
   passport.authenticate("local", (err, user, info) => {
     if (err) throw err;
     if (!user) res.send("No User Exists");
@@ -63,7 +64,16 @@ app.post("/login", (req, res, next) => {
   })(req, res, next);
 });
 
-app.post("/register", (req, res) => {
+app.get('/api/logout', (req, res) => {
+  console.log('User Id', req.user._id);
+  User.findByIdAndRemove(req.user._id, function(err){
+  if(err) res.send(err);
+  res.json({ message: 'User Deleted!'});
+ })
+});
+
+
+app.post("/api/register", (req, res) => {
   User.findOne({ username: req.body.username }, async (err, doc) => {
     if (err) throw err;
     if (doc) res.send("User Already Exists");
@@ -72,7 +82,6 @@ app.post("/register", (req, res) => {
 
       const newUser = new User({
         username: req.body.username,
-        email: req.body.email,
         password: hashedPassword,
       });
       await newUser.save();
@@ -80,12 +89,18 @@ app.post("/register", (req, res) => {
     }
   });
 });
-app.get("/user", (req, res) => {
-  res.send(req.user); // The req.user stores the entire user that has been authenticated inside of it.
+
+app.get("/api/user", (req, res) => {
+  if (!req.user){
+    return res.status(401).json(false)
+  } else {
+    return res.json(req.user)
+  }
+  
 });
 
 // express using router function which exporting from routes folder
-app.use(routes);
+app.use(router);
 //----------------------------------------- END OF ROUTES---------------------------------------------------
 //Start Server
 // .listen() function to run your domain name = advensure.com || advensure.herokuapp.com || advensure.github.io || localhost:3001
