@@ -33,6 +33,8 @@ import React from "react";
 import { NavbarBrand } from 'reactstrap';
 import asLogo from "../../asLogo.png";
 
+import "./Nav.css"
+
 import { Link } from "react-router-dom";
 // import "./style.css"
 
@@ -40,7 +42,7 @@ function Nav() {
   return (
 
 
-      <nav className="navbar navbar-expand-lg text-light">
+      <nav className="navbar navbar-expand-lg">
           <div className="container">
            <NavbarBrand href="/" className="mr-auto"><img src={asLogo} alt="AdvenSure Logo" width="50" /> AdvenSure</NavbarBrand>
 

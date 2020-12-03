@@ -1,9 +1,7 @@
-.loginBody{
+#body{
     background-image: url("../../assets/image/landingPage.jpeg") ;
     background-repeat: no-repeat;
     background-size: cover;
-    
-
 
 }
 .card {
