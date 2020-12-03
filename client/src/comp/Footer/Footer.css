@@ -1,11 +1,10 @@
 .footer{
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color:#fff279;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-  }
-  
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color:rgb(73, 124, 182, 0.8);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
