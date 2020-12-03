@@ -46,6 +46,11 @@ export default function App() {
           }
         </Route>
         <Route path="/logout" >
+          {
+            !authState.isLoggedin
+            ?<Home />
+            :<Redirect to={"/"} />
+          }
           <Logout />
         </Route>
         <Route path="/register">
