@@ -14,6 +14,9 @@ import Register from './pages/Register/Register'
 import Weather from './pages/UserPage/Weather'
 
 import "./App.css"
+
+
+
 import axios from 'axios';
 import Nav from './comp/Nav/Nav';
 import Footer from './comp/Footer/Footer';
@@ -24,6 +27,8 @@ import Weather from './pages/Weather';
 import Logout from './pages/Logout/logout';
 import Checklist from './pages/checklist/CheckList';
 import {useAuth, actions} from './utils/authState';
+import UserPage from './pages/UserPage'
+
 
 export default function App() {
     const [authState, authDispatch] = useAuth();
@@ -50,7 +55,7 @@ export default function App() {
           {
             !authState.isLoggedIn
             ?<Login />
-            :<Redirect to={"/"} />
+            :<Redirect to={"/user"} />
           }
         </Route>
         <Route path="/logout" >
@@ -63,9 +68,12 @@ export default function App() {
           <Checklist />
         </Route>
         <Route path="/weather">
-          <Weather city="Houston"/>
+          <Weather />
         </Route>
-        <Route path="/" >
+        <Route path="/user">
+          <UserPage />
+        </Route>
+    <Route path="/">
           <Home />
         </Route>
       </Switch>
