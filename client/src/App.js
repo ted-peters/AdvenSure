@@ -9,7 +9,7 @@ import "./App.css"
 import axios from 'axios';
 import Nav from './comp/Nav/Nav';
 import Footer from './comp/Footer/Footer';
-import Home from './pages/Home';
+import Home from './pages/Homepage/Home';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Weather from './pages/Weather';
