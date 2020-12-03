@@ -29,7 +29,7 @@ function Login() {
                 <div className="row">
                     <div className="col-12 text-center">
                         <h1>AdvenSure</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, eaque ullam? Placeat aliquam, labore, quos porro sed eos tempora rerum ea iste veritatis doloribus amet. Ipsa deleniti culpa explicabo minus!</p>
+                        <p>Where opportunity meets with preparation.</p>
                         <hr />
                     </div>
                 </div>
