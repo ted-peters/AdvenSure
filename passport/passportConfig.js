@@ -2,9 +2,6 @@ const User = require("../models/user");
 const bcrypt = require("bcryptjs");
 const localStrategy = require("passport-local").Strategy;
 
-
-//checks bcyrpt password to make sure it matches 
-
 module.exports = function (passport) {
   passport.use(
     new localStrategy((username, password, done) => {

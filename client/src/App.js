@@ -1,11 +1,14 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from 'react'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
 } from "react-router-dom";
-import "./App.css";
+import "./App.css"
+
+
+
 import axios from 'axios';
 import Nav from './comp/Nav/Nav';
 import Footer from './comp/Footer/Footer';
@@ -20,23 +23,20 @@ import UserPage from './pages/UserPage'
 
 
 export default function App() {
-  const [authState, authDispatch] = useAuth();
-  useEffect(() => {
-    axios
-      .get("/api/user")
-      .then((response) => {
-        authDispatch({
-          type: actions.LOGIN,
-          // displayName: response.data.displayName,
-          // userId: response.data.id
-        });
-      })
-      .catch((err) => {
-        authDispatch({
-          type: actions.LOGOUT,
-        });
-      });
-  }, []);
+    const [authState, authDispatch] = useAuth();
+    useEffect(() => {
+        axios.get("/api/user").then((response) => {
+            authDispatch({
+                type: actions.LOGIN,
+                // displayName: response.data.displayName,
+                // userId: response.data.id
+            })
+        }).catch(err => {
+            authDispatch({
+                type: actions.LOGOUT,
+            })
+        })
+    }, []);
 
   return (
     <Router>{/* This is for creacting all application as a router app */}
@@ -77,5 +77,5 @@ export default function App() {
       <Footer />
     </div>
     </Router>
-  );
+  )
 }
