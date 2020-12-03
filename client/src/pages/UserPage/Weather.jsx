@@ -65,7 +65,7 @@ import {
     DropdownItem
 } from 'reactstrap';
 import Moment from 'react-moment';
-import 'moment-timezone';
+// import 'moment-timezone';
 
 const APIKey = "aed52c01e7f5375831def9553ce0837d"
 const weatherDates = [0, 8, 16, 24, 32]

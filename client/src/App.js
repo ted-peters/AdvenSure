@@ -6,7 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import './App.css';
-import Nav from './comp/Nav'
+import Nav from './comp/Nav/Nav'
 import Footer from './comp/Footer/Footer'
 import Home from './pages/Home/Home'
 import Login from './pages/Login/Login'
@@ -18,16 +18,16 @@ import "./App.css"
 
 
 import axios from 'axios';
-import Nav from './comp/Nav/Nav';
-import Footer from './comp/Footer/Footer';
-import Home from './pages/Home';
-import Login from './pages/Login/Login';
-import Register from './pages/Register/Register';
-import Weather from './pages/Weather';
+// import Nav from './comp/Nav/Nav';
+// import Footer from './comp/Footer/Footer';
+// import Home from './pages/Home';
+// import Login from './pages/Login/Login';
+// import Register from './pages/Register/Register';
+// import Weather from './pages/Weather';
 import Logout from './pages/Logout/logout';
-import Checklist from './pages/checklist/CheckList';
+import Checklist from "./pages/Checklist/CheckList";
 import {useAuth, actions} from './utils/authState';
-import UserPage from './pages/UserPage'
+import UserPage from './pages/UserPage/UserPage'
 
 
 export default function App() {
