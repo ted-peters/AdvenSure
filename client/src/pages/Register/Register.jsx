@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Axios from "axios";
+import axios from "axios";
 import {Container, Row, Input, Button, Card, CardTitle, CardText } from "reactstrap";
 import './Register.css'
 
@@ -7,15 +7,15 @@ function Register() {
   const [registerUsername, setRegisterUsername] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const register = () => {
-    Axios({
+    axios({
       method: "POST",
       data: {
         username: registerUsername,
         password: registerPassword,
       },
       withCredentials: true,
-      url: "http://localhost:3001/register",
-    }).then((res) => console.log(res));
+      url: "/api/register",
+    })
   };
   
   return (
