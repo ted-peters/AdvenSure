@@ -5,10 +5,16 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+<<<<<<< HEAD
+=======
+import {AuthProvider} from "./utils/authState";
+>>>>>>> 63e30808b6f8a46306615520e0ccdd64bf1b7581
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AuthProvider>
+      <App />
+    </AuthProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

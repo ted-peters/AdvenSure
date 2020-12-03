@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Axios from "axios";
+import axios from "axios";
 import {Container, Row, Input, Button, Card, CardTitle, CardText } from "reactstrap";
 import './Register.css'
 
@@ -7,19 +7,19 @@ function Register() {
   const [registerUsername, setRegisterUsername] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const register = () => {
-    Axios({
+    axios({
       method: "POST",
       data: {
         username: registerUsername,
         password: registerPassword,
       },
       withCredentials: true,
-      url: "http://localhost:3001/register",
-    }).then((res) => console.log(res));
+      url: "/api/register",
+    })
   };
   
   return (
-    <div>
+    <div className="container">
     <Row>
           <Card className="card" body inverse style={{ backgroundColor: '#ff55', borderColor: '#f1f5' }}>
             <CardTitle className="font">Register Here</CardTitle>
@@ -33,7 +33,7 @@ function Register() {
               placeholder="password"
               onChange={(e) => setRegisterPassword(e.target.value)}
             />
-            <Button className="button" onClick={Register}>Login</Button>
+            <Button className="button" onClick={register}>Login</Button>
           </Card>
       </Row>
       </div>
