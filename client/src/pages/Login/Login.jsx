@@ -16,6 +16,10 @@ function Login() {
     window.location.reload()
   }
 
+  const refreshPage = () => {
+    window.location.reload();
+  }
+
   const login = () => {
     axios({
       method: "POST",
@@ -25,9 +29,7 @@ function Login() {
       },
       withCredentials: true,
       url: "/api/login",
-    }).then(
-       refreshPage()
-       )
+    }).then(refreshPage())
   };
 
   return (
