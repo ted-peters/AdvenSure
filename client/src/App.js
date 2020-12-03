@@ -5,7 +5,6 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-<<<<<<< HEAD
 import './App.css';
 import Nav from './comp/Nav'
 import Footer from './comp/Footer/Footer'
@@ -14,7 +13,6 @@ import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Weather from './pages/UserPage/Weather'
 
-=======
 import "./App.css"
 import axios from 'axios';
 import Nav from './comp/Nav/Nav';
@@ -26,7 +24,6 @@ import Weather from './pages/Weather';
 import Logout from './pages/Logout/logout';
 import Checklist from './pages/checklist/CheckList';
 import {useAuth, actions} from './utils/authState';
->>>>>>> 63e30808b6f8a46306615520e0ccdd64bf1b7581
 
 export default function App() {
     const [authState, authDispatch] = useAuth();
