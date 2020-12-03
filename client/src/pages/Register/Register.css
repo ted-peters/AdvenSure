@@ -1,0 +1,33 @@
+/* .container{
+    background-image: url("https://images.unsplash.com/photo-1508672019048-805c876b67e2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1393&q=80") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+} */
+
+.card {
+    text-align: center;
+    font-size: medium;
+    margin-left: 30%;
+    margin-right: 30%;
+    color: black;
+}
+.font{
+    font-size: large;
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+}
+
+.button {
+    color:black;
+    background-color: cadetblue;
+    margin-top: 10px;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.input {
+    width: 100%;
+    margin-top: 10px;
+}
