@@ -56,7 +56,7 @@ const db = require("./config/keys").mongoURI;
 
 // Routes
 app.post("/api/login", (req, res, next) => {
-  passport.authenticate("local", (err, user, info) => {
+  passport.authenticate("local", (err, user,) => {
     if (err) throw err;
     if (!user) res.send("No User Exists");
     else {
@@ -69,14 +69,13 @@ app.post("/api/login", (req, res, next) => {
   })(req, res, next);
 });
 
-app.get('/api/logout', (req, res) => {
-  console.log('User Id', req.user._id);
-  User.findByIdAndRemove(req.user._id, function(err){
-  if(err) res.send(err);
-  res.json({ message: 'User Deleted!'});
- })
-});
-
+app.get('/api/logout/', (req, res) => {
+      req.logout(req.user._id, (err) => {
+        if (err) throw err;
+        res.send("Logged Out Succesfully");
+        console.log(req.user);
+      });
+    })
 
 app.post("/api/register", (req, res) => {
   User.findOne({ username: req.body.username }, async (err, doc) => {
