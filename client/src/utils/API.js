@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+
 export default {
     saveData: function (data) {
         return axios.post('/api/user', {
@@ -13,4 +14,3 @@ export default {
         return axios.get('/api/user').then(res => res.data).catch(err => console.log(err))
     }
 }
-// 

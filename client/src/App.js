@@ -12,7 +12,7 @@ import "./App.css"
 import axios from 'axios';
 import Nav from './comp/Nav/Nav';
 import Footer from './comp/Footer/Footer';
-import Home from './pages/Home';
+import Home from './pages/Homepage/Home';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Weather from './pages/Weather';
@@ -51,6 +51,11 @@ export default function App() {
           }
         </Route>
         <Route path="/logout" >
+          {
+            !authState.isLoggedin
+            ?<Home />
+            :<Redirect to={"/"} />
+          }
           <Logout />
         </Route>
         <Route path="/register">
