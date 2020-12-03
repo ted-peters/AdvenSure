@@ -11,6 +11,10 @@ function Login() {
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
+  const refreshPage = () => {
+    window.location.reload();
+  }
+
   const login = () => {
     axios({
       method: "POST",
@@ -20,7 +24,7 @@ function Login() {
       },
       withCredentials: true,
       url: "/api/login",
-    })
+    }).then(refreshPage())
   };
 
   return (
