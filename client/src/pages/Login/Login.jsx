@@ -10,6 +10,11 @@ import './Login.css'
 function Login() {
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
+  const [isLoggedin, setIsLoggedIn] = useState();
+
+  const refreshPage = () =>{
+    window.location.reload()
+  }
 
   const login = () => {
     axios({
@@ -20,7 +25,9 @@ function Login() {
       },
       withCredentials: true,
       url: "/api/login",
-    })
+    }).then(
+       refreshPage()
+       )
   };
 
   return (
@@ -48,7 +55,7 @@ function Login() {
               placeholder="password"
               onChange={(e) => setLoginPassword(e.target.value)}
             />
-            <Button className="button" onClick= {login}>Login</Button>
+            <Button className="button" onClick={login}>Login</Button>
           </Card>
       </Row>
 
