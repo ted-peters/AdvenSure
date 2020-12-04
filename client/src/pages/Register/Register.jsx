@@ -20,12 +20,12 @@ function Register() {
   };
   
   return (
-    <div className="container text-center">
+    <div className="container text-center" body inverse style={{ padding: '25px' }}>
                 <div className="row">
                     <div className="col-12 text-center">
                         <h1>AdvenSure</h1>
                         <p></p>
-                        <hr />
+                        {/* <hr /> */}
                     </div>
                 </div>
     <Row>
