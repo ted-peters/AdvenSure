@@ -34,7 +34,7 @@ import { NavbarBrand } from 'reactstrap';
 import asLogo from "../../asLogo.png";
 
 import { Link } from "react-router-dom";
-// import "./style.css"
+import "./Nav.css"
 
 function Nav() {
   return (
@@ -43,11 +43,8 @@ function Nav() {
       <nav className="navbar navbar-expand-lg text-light">
           <div className="container">
            <NavbarBrand href="/" className="mr-auto"><img src={asLogo} alt="AdvenSure Logo" width="50" /> AdvenSure</NavbarBrand>
-
-              <Link className="navbar-brand" to="/">Home</Link>
               <ul className="navbar-nav">
                   <li className="nav-item">
-                    
                       <Link
                           to="/login"
                           className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
