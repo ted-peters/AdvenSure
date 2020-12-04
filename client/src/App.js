@@ -38,7 +38,7 @@ export default function App() {
     <div>
       <Router>
         <div>
-          {/* <Nav /> */}
+          <Nav />
           <Switch>
           {/* <Nav /> */}
             <Route exact path="/login">
