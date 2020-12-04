@@ -6,6 +6,7 @@ import {
   Route,
   Redirect,
   Link,
+  useParams,
 } from "react-router-dom";
 import axios from 'axios';
 
@@ -28,11 +29,12 @@ const Example = (props) => {
     //   url: "/api/user",
     // });
   };
+  const {name} = useParams();
   return (
     <div className="container">
       <div className="row">
         <div className="col-12 py-5">
-          <h1>Welcome USER</h1>
+          <h1>Welcome {name}</h1>
         </div>
       </div>
       <div className="row">
