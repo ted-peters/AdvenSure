@@ -41,7 +41,7 @@ function Register() {
               placeholder="password"
               onChange={(e) => setRegisterPassword(e.target.value)}
             />
-            <Button className="button" onClick={register}>Register</Button>
+            <Button className="button" style={{ color: 'black' }} onClick={register}>Register</Button>
           </Card>
       </Row>
       <p className="text-center">If you already have a log in information, please <Link to="/login">Log In</Link></p>

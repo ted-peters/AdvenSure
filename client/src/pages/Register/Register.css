@@ -25,7 +25,8 @@
     margin-top: 10px;
     margin-left: 40%;
     margin-right: 40%;
-    opacity: .1;
+    opacity: .6;
+    background: linear-gradient(to left, #ffffff, #ffefba)
 }
 
 .input {
