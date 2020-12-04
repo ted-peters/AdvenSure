@@ -10,15 +10,12 @@ import './Login.css'
 function Login() {
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
-  const [isLoggedin, setIsLoggedIn] = useState();
+  // const [isLoggedin, setIsLoggedIn] = useState();
 
   const refreshPage = () =>{
-    window.location.reload()
+    window.location.replace("/user")
   }
 
-  const refreshPage = () => {
-    window.location.reload();
-  }
 
   const login = () => {
     axios({
@@ -29,16 +26,25 @@ function Login() {
       },
       withCredentials: true,
       url: "/api/login",
-    }).then(refreshPage())
+    }).then(refreshPage)
+  };
+  const handleSubmit = e => {
+    e.preventDefault();
   };
 
+  const handleKeypress = e => {
+    //it triggers by pressing the enter key
+  if (e.keyCode === 13) {
+    handleSubmit();
+  }
+};
   return (
     <div className="loginBody">
       <div className="container text-center">
                 <div className="row">
                     <div className="col-12 text-center">
                         <h1>AdvenSure</h1>
-                        <p>Where opportunity meets with preparation.</p>
+                        <p>Where opportunity meets preparation.</p>
                         <hr />
                     </div>
                 </div>
@@ -56,13 +62,14 @@ function Login() {
               className="input"
               placeholder="password"
               onChange={(e) => setLoginPassword(e.target.value)}
+              onKeyPress={handleKeypress}
             />
             <Button className="button" onClick={login}>Login</Button>
           </Card>
       </Row>
 
       </div>  
-      <p className="text-center">If you have not sign up, please <Link to="/register">Sign Up</Link></p>
+      <p className="text-center">If you have not created an account yet, please <Link to="/register">Sign Up</Link></p>
       {/* <Row>
         <Container>
           <Card className="card" body inverse style={{ backgroundColor: '#f1f5', borderColor: '#f1f5' }}>
