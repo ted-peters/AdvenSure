@@ -21,11 +21,11 @@
 
 .button {
     color:black;
-    background-color: cadetblue;
+    background-color: lightgrey;
     margin-top: 10px;
     margin-left: 40%;
     margin-right: 40%;
-    opacity: .8;
+    opacity: .1;
 }
 
 .input {
