@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-
 import axios from "axios";
-import {Link} from "react-router-dom";
-
-import {Row, Input, Button, Card, CardTitle,} from "reactstrap";
+import { Link } from "react-router-dom";
+import { Row, Input, Button, Card, CardTitle, } from "reactstrap";
 import './Login.css'
 
 
@@ -12,7 +10,7 @@ function Login() {
   const [loginPassword, setLoginPassword] = useState("");
   const [isLoggedin, setIsLoggedIn] = useState();
 
-  const refreshPage = () =>{
+  const refreshPage = () => {
     window.location.reload()
   }
 
@@ -25,24 +23,20 @@ function Login() {
       },
       withCredentials: true,
       url: "/api/login",
-    }).then(refreshPage)
+    }).then(refreshPage())
   };
 
   return (
     <div className="loginBody">
       <div className="container text-center">
-                <div className="row">
-                    <div className="col-12 text-center">
-                        <h1>AdvenSure</h1>
-
-                        <p>Where opportunity meets preparation.</p>
-                        <hr />
-
-                    </div>
-                </div>
-                
-
-      <Row>
+        <div className="row">
+          <div className="col-12 text-center">
+            <h1>AdvenSure</h1>
+            <p>Where opportunity meets preparation.</p>
+            <hr />
+          </div>
+        </div>
+        <Row>
           <Card className="card" body inverse style={{ backgroundColor: 'transparent', borderColor: 'transparent' }}>
             <CardTitle className="font">Welcome Back</CardTitle>
             <Input
@@ -56,12 +50,12 @@ function Login() {
               onChange={(e) => setLoginPassword(e.target.value)}
             />
             <row className="d-flex justify-content-center">
-            <Button className="button" size="sm" style={{ color: 'black' }}onClick={login}>Login</Button>
+              <Button className="button" size="sm" style={{ color: 'black' }} onClick={login}>Login</Button>
             </row>
           </Card>
-      </Row>
+        </Row>
 
-      </div>  
+      </div>
       <p className="text-center">If you have not signed up, please <Link to="/register">Sign Up</Link></p>
       {/* <Row>
         <Container>
@@ -72,7 +66,6 @@ function Login() {
           </Card>
         </Container>
       </Row> */}
-
     </div>
   );
 }

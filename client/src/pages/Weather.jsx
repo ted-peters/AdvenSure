@@ -72,14 +72,14 @@ const weatherDates = [0, 8, 16, 24, 32]
 
 export default function Weather() {
 
-    const [data, setData] = useState([]);
+    const [data, setData] = useState("");
     const [city, setCity] = useState('Houston');
 
 
     useEffect(() => {
         // weatherData();
         fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial").then(response => response.json()).then(data => setData(data));
-    }, []);
+    }, [data]);
 
     console.log(data);
 
@@ -105,6 +105,8 @@ export default function Weather() {
                     </div>
                 </div>
             </div>
+        {
+            !data==""?
             <div className="container p-5 bg-light m-5">
                 <div className="row">
                     <div className="col-12">
@@ -128,12 +130,15 @@ export default function Weather() {
                                     </div>
                                     <div className="col-4 h3">Temperature: {data.list[date].main.temp}&deg;F</div>
                                     <div className="col-4 h3">Humidity: {data.list[date].main.humidity}%</div>
+                                    <Button onClick={findWeather}>Find Weather</Button>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
+            :<div></div>
+}
         </div>
     )
 }
