@@ -24,9 +24,12 @@
     margin-top: 10px;
     margin-left: 40%;
     margin-right: 40%;
+    opacity: .8;
 }
 
 .input {
     width: 100%;
     margin-top: 10px;
+    opacity: .7;
+    background: linear-gradient(to left, #ffefba, #ffffff);
 }

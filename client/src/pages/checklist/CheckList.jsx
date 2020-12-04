@@ -105,7 +105,7 @@ export default function CheckList() {
                     <div className="col-12">
                     <Form>
                         <FormGroup>
-                            <Input type="text" name="checklist" id="examplechecklist" placeholder="Add Item List" value={item}onChange={handleChange} />
+                            <Input type="text" body inverse style={{ color: 'black', opacity: '.6'}}name="checklist" id="examplechecklist" placeholder="Need to pack" value={item}onChange={handleChange} />
                             <Nav>
                             <Button onClick={handleClick} style={{marginTop: "10px"}}>Add Item</Button>
                             <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>

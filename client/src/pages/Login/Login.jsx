@@ -29,7 +29,7 @@ function Login() {
       },
       withCredentials: true,
       url: "/api/login",
-    }).then(refreshPage())
+    }).then(refreshPage)
   };
 
   return (
