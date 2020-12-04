@@ -24,8 +24,10 @@ function Register() {
                 <div className="row">
                     <div className="col-12 text-center">
                         <h1>AdvenSure</h1>
-                        <p>Where opportunity meets with preparation.</p>
-                        {/* <hr /> */}
+
+                        <p>Where opportunity meets preparation.</p>
+                        <hr />
+
                     </div>
                 </div>
     <Row>
