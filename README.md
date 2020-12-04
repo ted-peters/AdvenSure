@@ -15,9 +15,6 @@ Users of AdvenSure can access their packing checklist once logged in as well as 
 - Create a file at the root of the project called .env and add the following contents:
 MONGODBURL = "mongodb+srv://DropG:rG3VgkGB1DwSkQS8@cluster0.otx7r.mongodb.net/Advensure?retryWrites=true&w=majority"
 
-
-
-
 # Contributors
 
 # Technology Used
