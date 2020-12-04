@@ -30,7 +30,7 @@ function Register() {
                 </div>
     <Row>
           <Card className="card" body inverse style={{ backgroundColor: 'transparent', borderColor: 'transparent' }}>
-            <CardTitle className="font">New User</CardTitle>
+            <CardTitle className="font" body inverse style={{ color: 'black', opacity: '.7'}}>New User</CardTitle>
             <Input
               className="input"
               placeholder="username"
