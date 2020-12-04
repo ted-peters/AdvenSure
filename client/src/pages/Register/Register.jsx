@@ -24,7 +24,7 @@ function Register() {
                 <div className="row">
                     <div className="col-12 text-center">
                         <h1>AdvenSure</h1>
-                        <p></p>
+                        <p>Where opportunity meets preparation.</p>
                         <hr />
                     </div>
                 </div>

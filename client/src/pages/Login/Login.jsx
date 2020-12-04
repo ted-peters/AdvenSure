@@ -16,9 +16,6 @@ function Login() {
     window.location.reload()
   }
 
-  const refreshPage = () => {
-    window.location.reload();
-  }
 
   const login = () => {
     axios({
@@ -38,7 +35,7 @@ function Login() {
                 <div className="row">
                     <div className="col-12 text-center">
                         <h1>AdvenSure</h1>
-                        <p>Where opportunity meets with preparation.</p>
+                        <p>Where opportunity meets preparation.</p>
                         <hr />
                     </div>
                 </div>
