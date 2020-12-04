@@ -53,12 +53,19 @@ function Login() {
               placeholder="password"
               onChange={(e) => setLoginPassword(e.target.value)}
             />
+            <row className="d-flex justify-content-center">
             <Button className="button" size="sm" style={{ color: 'black' }}onClick={login}>Login</Button>
+            </row>
           </Card>
         </Row>
 
+<<<<<<< HEAD
       </div>
       <p className="text-center">If you have not sign up, please <Link to="/register">Sign Up</Link></p>
+=======
+      </div>  
+      <p className="text-center">If you have not signed up, please <Link to="/register">Sign Up</Link></p>
+>>>>>>> 2a3cbb298cafbee7cb5fd63c97026f5ddbac3c07
       {/* <Row>
         <Container>
           <Card className="card" body inverse style={{ backgroundColor: '#f1f5', borderColor: '#f1f5' }}>

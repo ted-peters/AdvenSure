@@ -25,7 +25,9 @@ function Logout() {
       <Row>
           <Card className="card" body inverse style={{ backgroundColor: '#ff55', borderColor: '#f1f5' }}>
             <CardTitle className="font">Logout</CardTitle>
+            <row className="d-flex justify-content-center">
           <Button className="button" onClick= {logout}>Logout</Button>
+          </row>
           </Card>
       </Row>
     </div>

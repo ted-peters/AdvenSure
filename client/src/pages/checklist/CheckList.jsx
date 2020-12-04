@@ -99,20 +99,20 @@ export default function CheckList() {
 
 
     return (
-        <Container>
+        <Container style={{marginBottom: '100px'}}>
             <div className="container">
                 <div className="row">
                     <div className="col-12">
                     <Form>
                         <FormGroup>
-                            <Input type="text" body inverse style={{ color: 'black', opacity: '.6'}}name="checklist" id="examplechecklist" placeholder="Need to pack" value={item}onChange={handleChange} />
+                            <Input type="text" body inverse style={{ color: 'black', opacity: '.6', borderRadius: '4px'}}name="checklist" id="examplechecklist" placeholder="Need to pack" value={item}onChange={handleChange} />
                             <Nav>
-                            <Button onClick={handleClick} style={{marginTop: "10px"}}>Add Item</Button>
+                            <Button onClick={handleClick} style={{borderRadius: '4px', background: 'linear-gradient(to top, #2193b0, #3a7bd5' ,marginTop: '15px', opacity: '.6'}}>Add Item</Button>
                             <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
-                                <DropdownToggle nav caret>
+                                <DropdownToggle nav caret type="button" style={{background: 'linear-gradient(to bottom, #ece9e6, #ffffff)' ,borderRadius: '4px', marginTop: '15px', marginLeft: '120px', opacity: '.6'}}>
                                     Quick Add Lists
                                 </DropdownToggle>
-                                <DropdownMenu>
+                                <DropdownMenu style={{background: 'linear-gradient(to bottom, #ece9e6, #ffffff)', opacity: '.9'}}>
                                     <DropdownItem onClick={addEssentials}>Travel Essentials</DropdownItem>
                                     <DropdownItem divider />
                                     <DropdownItem onClick={addTechnology}>Technology</DropdownItem>
@@ -133,11 +133,11 @@ export default function CheckList() {
                     </div>
                 </div>
             </div>
-            <Row>
+            <Row style={{borderRadius: '6px', background: 'linear-gradient(to bottom, #ece9e6, #ffffff)', opacity: '.6', marginTop: '6px'}}>
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-12 col-md-6">
-                            <Table>
+                            <Table >
                                 <thead>
                                     <tr>
                                         <th>Packed</th>
@@ -182,6 +182,7 @@ export default function CheckList() {
                 <div><input type="checkbox"></input><label>Swimsuits</label></div>
                 </Col> */}
             </Row>
+            <Button onClick={handleClick} style={{borderRadius: '4px', background: 'linear-gradient(to top, #2193b0, #3a7bd5' ,marginTop: '15px', opacity: '.6'}}>Save Checklist</Button>
         </Container>
     )
 }
