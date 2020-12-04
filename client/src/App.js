@@ -38,9 +38,8 @@ export default function App() {
     <div>
       <Router>
         <div>
-          {/* <Nav /> */}
+          <Nav />
           <Switch>
-          {/* <Nav /> */}
             <Route exact path="/login">
               {
                 !authState.isLoggedIn
@@ -66,7 +65,7 @@ export default function App() {
             <Route path="/register">
           <Register />
         </Route>
-        <Route path="/checklist"><Nav />
+        <Route path="/checklist">
           <Checklist />
         </Route>
         <Route path="/weather">
