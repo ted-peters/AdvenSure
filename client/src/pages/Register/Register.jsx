@@ -43,7 +43,9 @@ function Register() {
               placeholder="password"
               onChange={(e) => setRegisterPassword(e.target.value)}
             />
+              <row className="d-flex justify-content-center">
             <Button className="button" size="sm" style={{ color: 'black' }} onClick={register}>Register</Button>
+            </row>
           </Card>
       </Row>
       <p className="text-center">If you already have a log in information, please <Link to="/login">Log In</Link></p>
