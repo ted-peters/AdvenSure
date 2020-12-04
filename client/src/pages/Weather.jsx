@@ -105,9 +105,8 @@ export default function Weather() {
                     </div>
                 </div>
             </div>
-            {
-                data!==""?
-
+        {
+            !data==""?
             <div className="container p-5 bg-light m-5">
                 <div className="row">
                     <div className="col-12">
@@ -131,6 +130,7 @@ export default function Weather() {
                                     </div>
                                     <div className="col-4 h3">Temperature: {data.list[date].main.temp}&deg;F</div>
                                     <div className="col-4 h3">Humidity: {data.list[date].main.humidity}%</div>
+                                    <Button onClick={findWeather}>Find Weather</Button>
                                 </div>
                             </div>
                         </div>
@@ -138,8 +138,8 @@ export default function Weather() {
                 </div>
             </div>
 
-                :<div></div>
-            }
+            :<div></div>
+    }
         </div>
     )
 }
