@@ -11,11 +11,7 @@ function Login() {
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [isLoggedin, setIsLoggedIn] = useState();
-
-  const refreshPage = () =>{
-    window.location.reload()
-  }
-
+  
   const refreshPage = () => {
     window.location.reload();
   }
