@@ -34,7 +34,7 @@ import { NavbarBrand } from 'reactstrap';
 import asLogo from "../../asLogo.png";
 
 import { Link } from "react-router-dom";
-// import "./style.css"
+import "./Nav.css"
 
 function Nav() {
   return (
