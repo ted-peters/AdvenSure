@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-
 import axios from "axios";
-import {Link} from "react-router-dom";
-
-import {Row, Input, Button, Card, CardTitle,} from "reactstrap";
+import { Link } from "react-router-dom";
+import { Row, Input, Button, Card, CardTitle, } from "reactstrap";
 import './Login.css'
 
 
@@ -11,7 +9,7 @@ function Login() {
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [isLoggedin, setIsLoggedIn] = useState();
-  
+
   const refreshPage = () => {
     window.location.reload();
   }
@@ -31,16 +29,14 @@ function Login() {
   return (
     <div className="loginBody">
       <div className="container text-center">
-                <div className="row">
-                    <div className="col-12 text-center">
-                        <h1>AdvenSure</h1>
-                        <p>Where opportunity meets with preparation.</p>
-                        <hr />
-                    </div>
-                </div>
-                
-
-      <Row>
+        <div className="row">
+          <div className="col-12 text-center">
+            <h1>AdvenSure</h1>
+            <p>Where opportunity meets with preparation.</p>
+            <hr />
+          </div>
+        </div>
+        <Row>
           <Card className="card" body inverse style={{ backgroundColor: '#ff55', borderColor: '#f1f5' }}>
             <CardTitle className="font">Welcome Back</CardTitle>
             <Input
@@ -55,9 +51,9 @@ function Login() {
             />
             <Button className="button" onClick={login}>Login</Button>
           </Card>
-      </Row>
+        </Row>
 
-      </div>  
+      </div>
       <p className="text-center">If you have not sign up, please <Link to="/register">Sign Up</Link></p>
       {/* <Row>
         <Container>
