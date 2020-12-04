@@ -99,7 +99,7 @@ export default function CheckList() {
 
 
     return (
-        <Container>
+        <Container style={{marginBottom: '100px'}}>
             <div className="container">
                 <div className="row">
                     <div className="col-12">
@@ -182,7 +182,7 @@ export default function CheckList() {
                 <div><input type="checkbox"></input><label>Swimsuits</label></div>
                 </Col> */}
             </Row>
-            <Button style={{borderRadius: '4px', background: 'linear-gradient(to top, #2193b0, #3a7bd5' ,marginTop: '15px', opacity: '.6'}}>Save Checklist</Button>
+            <Button onClick={handleClick} style={{borderRadius: '4px', background: 'linear-gradient(to top, #2193b0, #3a7bd5' ,marginTop: '15px', opacity: '.6'}}>Save Checklist</Button>
         </Container>
     )
 }
