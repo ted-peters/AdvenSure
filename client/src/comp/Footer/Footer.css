@@ -1,8 +1,9 @@
 .footer{
   margin-top: 1rem;
   padding: 1rem;
-  background-color:rgba(118, 193, 243, 0.5);
+  background: linear-gradient(to top, #6dd5fa, #94d6ee, #f5eeb3);;
   position: fixed;
+  opacity: .4;
   bottom: 0;
   left: 0;
   width: 100%;
