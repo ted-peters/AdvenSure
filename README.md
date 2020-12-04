@@ -1,13 +1,20 @@
 # AdvenSure
-Travel App Version 1.0.0
+<img src= "./advensureSS.png">
 
-# Ted Test 
+# About
+AdvenSure is a platform that encompasses the minute packing details that can make or break the perfect trip. 
+Whether a seasoned traveler or first-time flyer, AdvenSure simplifies packing to reduce the anxiety of forgetting items both to your destination and on your way home. 
+Users of AdvenSure can access their packing checklist once logged in as well as other features such as weather conditions and saving the playlist you want to listen to on the flight there. Imagine streamlining packing and peace of mind.
 
+# Live Demo
+[AdvenSure](https://advensure.herokuapp.com/user)
 
-# Description
+# Getting Started
+- Sign up to get an API key for weather functionality at openweathermap.org
+- Fork the project and clone it locally
+- Create a file at the root of the project called .env and add the following contents:
+MONGODBURL = "mongodb+srv://DropG:rG3VgkGB1DwSkQS8@cluster0.otx7r.mongodb.net/Advensure?retryWrites=true&w=majority"
 
-# EJ test!
+# Contributors
 
-# testing 123
-dsfgadfgsdfg
-# working on weather 
+# Technology Used

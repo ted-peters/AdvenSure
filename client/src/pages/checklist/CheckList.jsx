@@ -62,8 +62,42 @@ export default function CheckList() {
         const arr = [...list];
         console.log(arr);
         const newitemslist = itemslist.concat(arr);
+        setList(newitemslist);      
+    }
+
+    const addColdWeather = () => {
+        const itemslist = ["beanie", "heavy jacket", "long underwear", "hand warmers"];
+        const arr = [...list];
+        console.log(arr);
+        const newitemslist = itemslist.concat(arr);
         setList(newitemslist);
     }
+
+    const addBeach = () => {
+        const itemslist = ["sunscreen", "tank-top", "margarita mix", "snacks", "sunglasses"];
+        const arr = [...list];
+        console.log(arr);
+        const newitemslist = itemslist.concat(arr);
+        setList(newitemslist);
+    }
+
+    const addBusiness = () => {
+        const itemslist = ["professional wear", "laptop", "portfolio", "roladex"];
+        const arr = [...list];
+        console.log(arr);
+        const newitemslist = itemslist.concat(arr);
+        setList(newitemslist);
+    }
+
+    const addAdventure = () => {
+        const itemslist = ["kayak", "chacos", "climbing gear", "good-times"];
+        const arr = [...list];
+        console.log(arr);
+        const newitemslist = itemslist.concat(arr);
+        setList(newitemslist);
+    }
+
+
     return (
         <Container>
             <div className="container">
@@ -71,7 +105,7 @@ export default function CheckList() {
                     <div className="col-12">
                     <Form>
                         <FormGroup>
-                            <Input type="text" name="checklist" id="examplechecklist" placeholder="Add Item List" value={item}onChange={handleChange} />
+                            <Input type="text" body inverse style={{ color: 'black', opacity: '.6'}}name="checklist" id="examplechecklist" placeholder="Need to pack" value={item}onChange={handleChange} />
                             <Nav>
                             <Button onClick={handleClick} style={{marginTop: "10px"}}>Add Item</Button>
                             <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
@@ -83,11 +117,13 @@ export default function CheckList() {
                                     <DropdownItem divider />
                                     <DropdownItem onClick={addTechnology}>Technology</DropdownItem>
                                     <DropdownItem divider />
-                                    <DropdownItem>Beach</DropdownItem>
+                                    <DropdownItem onClick={addColdWeather}>Cold Weather</DropdownItem>
                                     <DropdownItem divider />
-                                    <DropdownItem>Cold Weather</DropdownItem>
+                                    <DropdownItem onClick={addBeach}>Beach</DropdownItem>
                                     <DropdownItem divider />
-                                    <DropdownItem>Business</DropdownItem>
+                                    <DropdownItem onClick={addBusiness}>Business</DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem onClick={addAdventure}>Adventure</DropdownItem>
                                     <DropdownItem divider />
                                 </DropdownMenu>
                             </Dropdown>

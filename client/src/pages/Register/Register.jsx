@@ -20,17 +20,19 @@ function Register() {
   };
   
   return (
-    <div className="container text-center">
+    <div className="container text-center" body inverse style={{ padding: '25px' }}>
                 <div className="row">
                     <div className="col-12 text-center">
                         <h1>AdvenSure</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, eaque ullam? Placeat aliquam, labore, quos porro sed eos tempora rerum ea iste veritatis doloribus amet. Ipsa deleniti culpa explicabo minus!</p>
+
+                        <p>Where opportunity meets preparation.</p>
                         <hr />
+
                     </div>
                 </div>
     <Row>
-          <Card className="card" body inverse style={{ backgroundColor: '#ff55', borderColor: '#f1f5' }}>
-            <CardTitle className="font">Register Here</CardTitle>
+          <Card className="card" body inverse style={{ backgroundColor: 'transparent', borderColor: 'transparent' }}>
+            <CardTitle className="font" body inverse style={{ color: 'black', opacity: '.7'}}>New User</CardTitle>
             <Input
               className="input"
               placeholder="username"
@@ -41,7 +43,7 @@ function Register() {
               placeholder="password"
               onChange={(e) => setRegisterPassword(e.target.value)}
             />
-            <Button className="button" onClick={register}>Login</Button>
+            <Button className="button" size="sm" style={{ color: 'black' }} onClick={register}>Register</Button>
           </Card>
       </Row>
       <p className="text-center">If you already have a log in information, please <Link to="/login">Log In</Link></p>
