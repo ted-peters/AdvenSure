@@ -2,7 +2,7 @@
     background-image: url("../../assets/image/landingPage.jpeg") ;
     background-repeat: no-repeat;
     background-size: cover;
-
+    font-family: 'Montserrat', sans-serif;
 }
 .card {
     text-align: center;
@@ -16,15 +16,17 @@
     font-weight: bold;
     color: black;
     text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .button {
     color:black;
-    background-color: cadetblue;
+    /* background-color: cadetblue;
     margin-top: 10px;
     margin-left: 40%;
-    margin-right: 40%;
+    margin-right: 40%; */
     opacity: .8;
+    background: linear-gradient(to left, #ffefba, #ffffff);
 }
 
 .input {

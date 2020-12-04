@@ -16,7 +16,6 @@ function Login() {
     window.location.reload()
   }
 
-
   const login = () => {
     axios({
       method: "POST",
@@ -35,14 +34,16 @@ function Login() {
                 <div className="row">
                     <div className="col-12 text-center">
                         <h1>AdvenSure</h1>
+
                         <p>Where opportunity meets preparation.</p>
                         <hr />
+
                     </div>
                 </div>
                 
 
       <Row>
-          <Card className="card" body inverse style={{ backgroundColor: '#ff55', borderColor: '#f1f5' }}>
+          <Card className="card" body inverse style={{ backgroundColor: 'transparent', borderColor: 'transparent' }}>
             <CardTitle className="font">Welcome Back</CardTitle>
             <Input
               className="input"
@@ -54,7 +55,7 @@ function Login() {
               placeholder="password"
               onChange={(e) => setLoginPassword(e.target.value)}
             />
-            <Button className="button" onClick={login}>Login</Button>
+            <Button className="button" size="sm" style={{ color: 'black' }}onClick={login}>Login</Button>
           </Card>
       </Row>
 
