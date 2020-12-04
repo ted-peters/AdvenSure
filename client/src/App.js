@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,59 +6,56 @@ import {
   Redirect,
 } from "react-router-dom";
 import "./App.css"
-
-
-
 import axios from 'axios';
 import Nav from './comp/Nav/Nav';
 import Footer from './comp/Footer/Footer';
-import Home from './pages/Homepage/Home';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Weather from './pages/Weather';
 import Logout from './pages/Logout/logout';
 import Checklist from './pages/checklist/CheckList';
-import {useAuth, actions} from './utils/authState';
+import { useAuth, actions } from './utils/authState';
 import UserPage from './pages/UserPage'
 
 
 export default function App() {
-    const [authState, authDispatch] = useAuth();
-    useEffect(() => {
-        axios.get("/api/user").then((response) => {
-            authDispatch({
-                type: actions.LOGIN,
-                // displayName: response.data.displayName,
-                // userId: response.data.id
-            })
-        }).catch(err => {
-            authDispatch({
-                type: actions.LOGOUT,
-            })
-        })
-    }, []);
+  const [authState, authDispatch] = useAuth();
+  useEffect(() => {
+    axios.get("/api/user").then((response) => {
+      authDispatch({
+        type: actions.LOGIN,
+        // displayName: response.data.displayName,
+        // userId: response.data.id
+      })
+    }).catch(err => {
+      authDispatch({
+        type: actions.LOGOUT,
+      })
+    })
+  }, []);
 
   return (
-    <Router>{/* This is for creacting all application as a router app */}
     <div>
-      <Nav />
-      <Switch>
-        <Route path="/login">
-          {
-            !authState.isLoggedIn
-            ?<Login />
-            :<Redirect to={"/user"} />
-          }
-        </Route>
-        <Route path="/logout" >
-          {
-            !authState.isLoggedin
-            ?<Home />
-            :<Redirect to={"/"} />
-          }
-          <Logout />
-        </Route>
-        <Route path="/register">
+      <Router>
+        <div>
+          <Nav />
+          <Switch>
+            <Route exact path="/login">
+              {
+                !authState.isLoggedIn
+                  ? <Login />
+                  : <Redirect to="/user" />
+              }
+            </Route>
+            <Route path = "/logout">
+              {
+                !authState.isLoggedIn
+                  ?<Redirect to="/login" />
+                  :<p className="text-center">You are logged in</p>
+              }
+              <Logout/>
+            </Route>
+            <Route path="/register">
           <Register />
         </Route>
         <Route path="/checklist">
@@ -70,12 +67,10 @@ export default function App() {
         <Route path="/user">
           <UserPage />
         </Route>
-    <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-      <Footer />
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
     </div>
-    </Router>
   )
 }

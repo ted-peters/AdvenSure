@@ -66,7 +66,7 @@ app.post("/api/login", (req, res, next) => {
 
 app.get('/api/logout', function(req, res){
   req.logout();
-  res.redirect('/');
+  res.redirect('/login');
 });
 
 app.post("/api/register", (req, res) => {
