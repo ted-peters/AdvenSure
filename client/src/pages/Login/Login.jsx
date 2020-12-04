@@ -40,7 +40,7 @@ function Login() {
                 
 
       <Row>
-          <Card className="card" body inverse style={{ backgroundColor: '#ff55', borderColor: '#f1f5' }}>
+          <Card className="card" body inverse style={{ backgroundColor: 'transparent', borderColor: 'transparent' }}>
             <CardTitle className="font">Welcome Back</CardTitle>
             <Input
               className="input"
@@ -52,7 +52,7 @@ function Login() {
               placeholder="password"
               onChange={(e) => setLoginPassword(e.target.value)}
             />
-            <Button className="button" onClick={login}>Login</Button>
+            <Button className="button" size="sm" style={{ color: 'black' }}onClick={login}>Login</Button>
           </Card>
       </Row>
 

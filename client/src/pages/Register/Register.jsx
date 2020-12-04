@@ -24,7 +24,7 @@ function Register() {
                 <div className="row">
                     <div className="col-12 text-center">
                         <h1>AdvenSure</h1>
-                        <p></p>
+                        <p>Where opportunity meets with preparation.</p>
                         {/* <hr /> */}
                     </div>
                 </div>
@@ -41,7 +41,7 @@ function Register() {
               placeholder="password"
               onChange={(e) => setRegisterPassword(e.target.value)}
             />
-            <Button className="button" style={{ color: 'black' }} onClick={register}>Register</Button>
+            <Button className="button" size="sm" style={{ color: 'black' }} onClick={register}>Register</Button>
           </Card>
       </Row>
       <p className="text-center">If you already have a log in information, please <Link to="/login">Log In</Link></p>
