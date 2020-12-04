@@ -10,7 +10,7 @@ function Logout() {
 
 
   const refreshPage = () => {
-    window.location.reload();
+    window.location.replace("/");
   }
 
   const logout = () => {
