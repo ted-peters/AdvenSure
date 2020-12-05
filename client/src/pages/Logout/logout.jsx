@@ -17,7 +17,7 @@ function Logout() {
     axios({
       method: "GET",
       url: "/api/logout",
-    }).then(authDispatch()(refreshPage()));
+    }).then(()=> authDispatch(),refreshPage());
   };
 
   return (
