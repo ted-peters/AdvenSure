@@ -4,14 +4,13 @@ import { Link } from "react-router-dom";
 import { Row, Input, Button, Card, CardTitle, } from "reactstrap";
 import './Login.css'
 
-
 function Login() {
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [isLoggedin, setIsLoggedIn] = useState();
 
   const refreshPage = () => {
-    window.location.reload()
+    window.location.href="/login";
   }
 
   const login = () => {
@@ -23,7 +22,9 @@ function Login() {
       },
       withCredentials: true,
       url: "/api/login",
-    }).then(refreshPage())
+    }).then(() => {
+      refreshPage()
+    })
   };
 
   return (

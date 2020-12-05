@@ -16,5 +16,10 @@ Users of AdvenSure can access their packing checklist once logged in as well as 
 MONGODBURL = "mongodb+srv://DropG:rG3VgkGB1DwSkQS8@cluster0.otx7r.mongodb.net/Advensure?retryWrites=true&w=majority"
 
 # Contributors
+[Mary Kathryn Holt](https://github.com/MaryKathryn0)
+[Ted Peters](https://github.com/Drop-G)
+[EJ Kennelly](https://github.com/ejkennelly)
+[Halle Wehmeyer](https://github.com/hallewehmeyer)
+[Brandon Cermak](https://github.com/bcermak)
 
 # Technology Used
