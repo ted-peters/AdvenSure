@@ -23,10 +23,10 @@ mongoose.connection.on('disconnected', function () { console.log("Mongo DB disco
 
 // connect front-end
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build")); 
+  app.use(express.static("client/build"));
 }
 
-// Middleware 
+// Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
@@ -78,6 +78,7 @@ app.post("/api/register", (req, res) => {
 
       const newUser = new User({
         username: req.body.username,
+        email: req.body.email,
         password: hashedPassword,
       });
       await newUser.save();
