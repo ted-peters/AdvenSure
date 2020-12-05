@@ -8,6 +8,11 @@ function Register() {
   const [registerUsername, setRegisterUsername] = useState("");
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
+
+  const refreshPage = () => {
+    window.location.href="/user";
+  }
+
   const register = () => {
     axios({
       method: "POST",
@@ -18,7 +23,7 @@ function Register() {
       },
       withCredentials: true,
       url: "/api/register",
-    })
+    }).then(refreshPage())
   };
   return (
     <div className="container text-center" body inverse style={{ padding: '25px' }}>
