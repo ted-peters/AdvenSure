@@ -10,7 +10,7 @@ function Login() {
   const [isLoggedin, setIsLoggedIn] = useState();
 
   const refreshPage = () => {
-    window.location.href="/login";
+    window.location.href="/user";
   }
 
   const login = () => {
@@ -22,9 +22,7 @@ function Login() {
       },
       withCredentials: true,
       url: "/api/login",
-    }).then(() => {
-      refreshPage()
-    })
+    }).then(refreshPage())
   };
 
   return (
