@@ -63,6 +63,7 @@ const Example = (props) => {
                 placeholder="date placeholder"
               />
             </FormGroup>
+            <Button onClick={userTrip}>Create Checklist</Button>
           </Form>
         </div>
         <div className="col-3">
