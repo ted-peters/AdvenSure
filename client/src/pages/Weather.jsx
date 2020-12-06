@@ -106,7 +106,7 @@ export default function Weather() {
                 </div>
             </div>
         {
-            !data===""?
+            data !== "" ?
             <div className="container p-5 bg-light m-5">
                 <div className="row">
                     <div className="col-12">
