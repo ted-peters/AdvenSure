@@ -81,7 +81,7 @@ const Example = (props) => {
           </Button>
           <hr />
           <h3>User Checklist</h3>
-          <ul className="userChecklistItem">
+          <ul className="userCheckListItem">
             {list.map(item => (
               <li><Button style={{background: 'linear-gradient(to bottom, #ece9e6, #ffffff)' ,borderRadius: '4px', opacity: '.6'}}><Link to="/checklist">{item}</Link></Button></li>
             ))}
