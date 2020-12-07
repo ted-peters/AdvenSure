@@ -10,14 +10,15 @@ function Logout() {
 
 
   const refreshPage = () => {
-    window.location.reload("/");
+    window.location.href="/login";
   }
 
   const logout = () => {
     axios({
       method: "GET",
-      url: "/api/logout",
-    }).then(()=> authDispatch(),refreshPage());
+      url: "/logout",
+    }).then(()=> { 
+      refreshPage()});
   };
 
   return (

@@ -67,7 +67,7 @@ import {
 import Moment from 'react-moment';
 import 'moment-timezone';
 
-const APIKey = "aed52c01e7f5375831def9553ce0837d"
+const APIKey = ""
 const weatherDates = [0, 8, 16, 24, 32]
 
 export default function Weather() {
@@ -79,7 +79,7 @@ export default function Weather() {
     useEffect(() => {
         // weatherData();
         fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial").then(response => response.json()).then(data => setData(data));
-    }, [data]);
+    }, []);
 
     console.log(data);
 
@@ -106,7 +106,7 @@ export default function Weather() {
                 </div>
             </div>
         {
-            data !== "" ?
+            data!==""?
             <div className="container p-5 bg-light m-5">
                 <div className="row">
                     <div className="col-12">
