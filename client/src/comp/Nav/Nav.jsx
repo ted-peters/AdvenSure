@@ -138,7 +138,7 @@ function Nav() {
                                         fontSize: "20px",
                                         color: "white",
                                         borderRadius: "80px",
-                                        background: "linear-gradient(to top, #2193b0, #3a7bd5",,
+                                        background: "linear-gradient(to top, #2193b0, #3a7bd5",
                                         // background: "linear-gradient(to top, #2193b0, #3a7bd5",
                                         marginTop: "20px",
                                         marginLeft: "10px",
