@@ -19,7 +19,7 @@ const Example = (props) => {
     setUser(JSON.parse(localStorage.getItem('user')));
     setUserTrip(user);
     JSON.parse(localStorage.getItem(userTrip)) === null ? localStorage.setItem(userTrip, JSON.stringify(list)) : setList(JSON.parse(localStorage.getItem(userTrip)))
-  })
+  }, userTrip);
 
   const userTripAdd = () => {
     let title = document.getElementById('yourTrip').value;
@@ -38,11 +38,13 @@ const Example = (props) => {
     //   url: "/api/user",
     // });
   };
-  const handleKeyPress = (target) => {
-    if(target.charCode==13){
-      userTripAdd();    
-    } 
+
+  const tripClick = (e) => {
+    console.log(e.target.value);
+    localStorage.setItem("userTripChecklist", JSON.stringify(`${user}${e.target.value}`))
+    window.location.href="/checklist";
   }
+
   const {name} = useParams();
   return (
     <div className="container">
@@ -57,11 +59,20 @@ const Example = (props) => {
           <Form>
             <FormGroup>
               <Label for="yourTrip">Your Trip</Label>
-              <Input type="text" name="text" id="yourTrip" />
+              <Input style={{width: "100%",
+                      borderRadius: "60px",
+                      marginTop: "10px",
+                      opacity: ".7",
+                      background: "linear-gradient(to left, #ffefba, #ffffff)"}} 
+                        type="text" name="text" id="yourTrip" />
             </FormGroup>
             <FormGroup>
               <Label for="tripStart">Trip Start Date</Label>
-              <Input
+              <Input style={{width: "100%",
+                      borderRadius: "60px",
+                      marginTop: "10px",
+                      opacity: ".7",
+                      background: "linear-gradient(to left, #ffefba, #ffffff)"}} 
                 type="date"
                 name="date"
                 id="tripStart"
@@ -70,26 +81,45 @@ const Example = (props) => {
             </FormGroup>
             <FormGroup>
               <Label for="tripReturn">Trip Return Date</Label>
-              <Input
+              <Input style={{width: "100%",
+                      borderRadius: "60px",
+                      marginTop: "10px",
+                      opacity: ".7",
+                      background: "linear-gradient(to left, #ffefba, #ffffff)"}} 
                 type="date"
                 name="date"
                 id="tripReturn"
                 placeholder="date placeholder"
-                onKeyPress={handleKeyPress}
               />
             </FormGroup>
-            <Button onClick={userTripAdd}>Create Checklist</Button>
+            <Button     style={{
+                      fontSize: "16px",
+                      color: "white",
+                      opacity: ".6",
+                      borderRadius: "40px",
+                      background: "linear-gradient(to top, #2193b0, #3a7bd5",
+                      marginTop: "16px",
+                      marginLeft: "5px",
+                      height: "40px",
+                      border: "none",
+                      boxShadow:  "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",
+                    }}onClick={userTripAdd}>Create Checklist</Button>
           </Form>
         </div>
         <div className="col-3">
-          <Button className="btn btn-block btn-sm btn-light">
+          <Button className style={{width: "100%",
+                      borderRadius: "60px",
+                      opacity: ".7",
+                      marginTop: "10px",
+                      border: "none",
+                      background: "linear-gradient(to left, #ffefba, #ffffff)"}}>
             <Link to="/weather">Destination Weather Condition</Link>
           </Button>
           <hr />
           <h3>User Checklist</h3>
           <ul className="userCheckListItem">
             {list.map(item => (
-              <li><Button style={{background: 'linear-gradient(to bottom, #ece9e6, #ffffff)' ,borderRadius: '4px', opacity: '.6'}}><Link to="/checklist">{item}</Link></Button></li>
+              <li><Button style={{border: "none", boxShadow:  "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",background: "linear-gradient(to top, #2193b0, #3a7bd5",borderRadius: "40px",fontSize: "16px",borderRadius: '4px', opacity: '.6'}} onClick={tripClick} value={item}>{item}</Button></li>
             ))}
           </ul>
         </div>

@@ -41,29 +41,29 @@ function Register() {
       </div>
       <Row>
         <Card className="card" body inverse style={{ backgroundColor: 'transparent', borderColor: 'transparent' }}>
-          <CardTitle className="font" body inverse style={{ color: 'black', opacity: '.7' }}>New User</CardTitle>
-          <Input
+          <CardTitle className="font" body inverse style={{ color: 'black', opacity: '.7' }}>Welcome</CardTitle>
+          <Input style={{borderRadius: '100px'}}
             className="input"
             placeholder="Name"
             onChange={(e) => setRegisterUsername(e.target.value)}
           />
-          <Input
+          <Input style={{borderRadius: '100px'}}
             className="input"
             placeholder="Email"
             onChange={(e) => setRegisterEmail(e.target.value)}
           />
-          <Input
+          <Input style={{borderRadius: '100px'}}
             className="input"
             placeholder="Password"
             onChange={(e) => setRegisterPassword(e.target.value)}
             onKeyPress={handleKeyPress}
           />
           <row className="d-flex justify-content-center">
-            <Button className="button" size="sm" style={{ color: 'black' }} onClick={register}>Register</Button>
+            <Button className="button" size="sm" style={{ borderRadius: '100px', color: 'black' }} onClick={register}>Register</Button>
           </row>
         </Card>
       </Row>
-      <p className="text-center">If you already have a log in information, please <Link to="/login">Log In</Link></p>
+      <p className="text-center">Already have an account? <Link to="/login">Log In</Link ></p>
     </div>
   );
 }
