@@ -38,6 +38,11 @@ const Example = (props) => {
     //   url: "/api/user",
     // });
   };
+  const handleKeyPress = (target) => {
+    if(target.charCode==13){
+      userTripAdd();    
+    } 
+  }
   const {name} = useParams();
   return (
     <div className="container">
@@ -70,6 +75,7 @@ const Example = (props) => {
                 name="date"
                 id="tripReturn"
                 placeholder="date placeholder"
+                onKeyPress={handleKeyPress}
               />
             </FormGroup>
             <Button onClick={userTripAdd}>Create Checklist</Button>
