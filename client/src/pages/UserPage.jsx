@@ -55,8 +55,7 @@ const Example = (props) => {
         </div>
       </div>
       <div className="row">
-        <div className="col-3"></div>
-        <div className="col-6 trip">
+        <div className="col-9 trip">
           <h4>Create New Trip</h4>
           <Form>
             <FormGroup>
@@ -118,8 +117,6 @@ const Example = (props) => {
           
             <Button className style={{
               width: "100%",
-              fontSize: "13.5px",
-              fontWeight:"bold",
               borderRadius: "60px",
               opacity: ".7",
               marginTop: "10px",
