@@ -55,6 +55,7 @@ function Login() {
             <Input style={{ borderRadius: '100px' }}
               className="input"
               placeholder="password"
+              type="password"
               onChange={(e) => setLoginPassword(e.target.value)}
               onKeyPress={handleKeyPress}
             />
