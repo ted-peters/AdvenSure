@@ -283,13 +283,13 @@ export default function CheckList() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <Form>
+            <Form >
               <FormGroup>
                 <Input
                   type="text"
                   body
                   inverse
-                  style={{ color: "black", opacity: ".6", borderRadius: "4px" }}
+                  style={{ color: "black", opacity: ".6", borderRadius: "100px" }}
                   name="checklist"
                   id="examplechecklist"
                   placeholder="Mix and match items from our curated lists, or add your own here"
@@ -297,17 +297,24 @@ export default function CheckList() {
                   onChange={handleChange}
                 />
                 <Nav>
-                  <Button
+                  <Button 
                     onClick={handleClick}
                     style={{
-                      borderRadius: "4px",
-                      background: "linear-gradient(to top, #2193b0, #3a7bd5",
-                      marginTop: "15px",
-                      opacity: ".6",
+                      fontSize: "20px",
+                      color: "black",
+                      borderRadius: "80px",
+                      background: "linear-gradient(45deg, #d0ccba, #afac9d)",
+                      // background: "linear-gradient(to top, #2193b0, #3a7bd5",
+                      marginTop: "20px",
+                      marginLeft: "10px",
+                      opacity: ".5",
+                      height: "50px",
+                      border: "none",
+                      boxShadow:  "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",
                     }}
                   >
                     Add Item
-                  </Button>
+                  </Button>​
                   <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
                     <DropdownToggle
                       nav
@@ -316,7 +323,7 @@ export default function CheckList() {
                       style={{
                         background:
                           "linear-gradient(to bottom, #ece9e6, #ffffff)",
-                        borderRadius: "4px",
+                        borderRadius: "200px",
                         marginTop: "15px",
                         marginLeft: "120px",
                         opacity: ".6",
@@ -326,6 +333,7 @@ export default function CheckList() {
                     </DropdownToggle>
                     <DropdownMenu
                       style={{
+                        borderRadius: "10px",
                         background:
                           "linear-gradient(to bottom, #ece9e6, #ffffff)",
                         opacity: ".9",
@@ -396,6 +404,7 @@ export default function CheckList() {
                               type="checkbox"
                               onClick={handleCheck}
                               name={item}
+                              checked=""
                             ></input>
                           </td>
                           <td>{item}</td>
@@ -432,6 +441,7 @@ export default function CheckList() {
                               type="checkbox"
                               onChange={handleChecked}
                               name={item}
+                              checked=""
                             ></input>
                           </td>
                           <td>{item}</td>

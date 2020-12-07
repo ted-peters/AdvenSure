@@ -35,39 +35,140 @@ import asLogo from "../../asLogo.png";
 
 import { Link } from "react-router-dom";
 import "./Nav.css"
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Redirect,
+} from "react-router-dom";
 
 function Nav() {
-  return (
 
+    const refreshPage = () => {
+        window.location.href = "/login";
+    }
+    const userPage = () => {
+        window.location.href = "/user";
+    }
+    return (
 
-      <nav className="navbar navbar-expand-lg text-light">
-          <div className="container">
-           <NavbarBrand href="/" className="mr-auto"><img src={asLogo} alt="AdvenSure Logo" width="50" /> AdvenSure</NavbarBrand>
-              <ul className="navbar-nav">
-                  <li className="nav-item">
-                      <Link
-                          to="/login"
-                          className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
-                      > Login</Link>
-                  </li>
-                  <li className="nav-item">
-                      <Link
-                          to="/register"
-                          className={window.location.pathname === "/register" ? "nav-link active" : "nav-link"}
-                      >Sign Up</Link>
-                  </li>
-                  <li className="nav-item">
-                    
-                    <Link
-                        to="/logout"
-                        className={window.location.pathname === "/logout" ? "nav-link active" : "nav-link"}
-                    > Logout</Link>
-                </li>
-              </ul>
-          </div>
-      </nav>
+        <Router>
+            <nav className="navbar navbar-expand-lg text-light">
+                <div className="container">
+                    <NavbarBrand href="/" className="mr-auto"><img src={asLogo} alt="AdvenSure Logo" width="50" /> AdvenSure</NavbarBrand>
+                    <ul className="navbar-nav">
+                        <Switch>
+                            {/* <Route path="/">
 
-  );
+                                <li className="nav-item">
+                                    <Link
+                                        to="/login"
+                                        className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
+                                    > Login</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link
+                                        to="/register"
+                                        className={window.location.pathname === "/register" ? "nav-link active" : "nav-link"}
+                                    >Sign Up</Link>
+                                </li>
+                            </Route>
+                            <Route path="/login">
+
+                                <li className="nav-item">
+                                    <Link
+                                        to="/login"
+                                        className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
+                                    > Login</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link
+                                        to="/register"
+                                        className={window.location.pathname === "/register" ? "nav-link active" : "nav-link"}
+                                    >Sign Up</Link>
+                                </li>
+                            </Route>
+                            <Route path="/register">
+
+                                <li className="nav-item">
+                                    <Link
+                                        to="/login"
+                                        className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
+                                    > Login</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link
+                                        to="/register"
+                                        className={window.location.pathname === "/register" ? "nav-link active" : "nav-link"}
+                                    >Sign Up</Link>
+                                </li>
+                            </Route> */}
+                            <Route path="/user">
+
+                                <li className="nav-item">
+
+                                    {/* <Link
+                                        to="/login"
+                                        className={window.location.pathname === "/logout" ? "nav-link active" : "nav-link"}
+                                    > Logout</Link> */}
+                                    <button style={{
+                                        fontSize: "20px",
+                                        color: "black",
+                                        borderRadius: "80px",
+                                        background: "linear-gradient(to top, #2193b0, #3a7bd5",
+                                        // background: "linear-gradient(to top, #2193b0, #3a7bd5",
+                                        marginTop: "20px",
+                                        marginLeft: "10px",
+                                        opacity: ".5",
+                                        height: "50px",
+                                        border: "none",
+                                        boxShadow: "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",
+                                    }} onClick={refreshPage}>Logout</button>
+                                </li>
+                            </Route>
+                            <Route path="/checklist">
+
+                                <li className="nav-item">
+
+                                    {/* <Link
+                                        to="/login"
+                                        className={window.location.pathname === "/logout" ? "nav-link active" : "nav-link"}
+                                    > Logout</Link> */}
+                                    <button style={{
+                                        fontSize: "20px",
+                                        color: "white",
+                                        borderRadius: "80px",
+                                        background: "linear-gradient(to top, #2193b0, #3a7bd5",
+                                        // background: "linear-gradient(to top, #2193b0, #3a7bd5",
+                                        marginTop: "20px",
+                                        marginLeft: "10px",
+                                        opacity: ".5",
+                                        height: "50px",
+                                        border: "none",
+                                        boxShadow: "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",
+                                    }} onClick={userPage}>My Trips</button>
+                                    <button style={{
+                                        fontSize: "20px",
+                                        color: "white",
+                                        borderRadius: "80px",
+                                        background: "linear-gradient(to top, #2193b0, #3a7bd5",
+                                        // background: "linear-gradient(to top, #2193b0, #3a7bd5",
+                                        marginTop: "20px",
+                                        marginLeft: "10px",
+                                        opacity: ".5",
+                                        height: "50px",
+                                        border: "none",
+                                        boxShadow: "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",
+                                    }} onClick={refreshPage}>Logout</button>
+
+                                </li>
+                            </Route>
+                        </Switch>
+                    </ul>
+                </div>
+            </nav>
+        </Router>
+    );
 }
 
 export default Nav;
