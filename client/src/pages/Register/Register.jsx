@@ -23,7 +23,7 @@ function Register() {
       },
       withCredentials: true,
       url: "/api/register",
-    }).then(refreshPage())
+    }).then(localStorage.setItem("user", JSON.stringify(registerUsername))).then(refreshPage())
   };
   return (
     <div className="container text-center" body inverse style={{ padding: '25px' }}>
