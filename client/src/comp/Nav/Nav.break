@@ -47,9 +47,7 @@ function Nav() {
     const refreshPage = () => {
         window.location.href = "/logout";
     }
-    const userPage = () => {
-        window.location.href = "/user";
-    }
+    
     return (
 
         <Router>
