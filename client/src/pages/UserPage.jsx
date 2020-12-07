@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 import {
   BrowserRouter as Router,
@@ -11,13 +11,22 @@ import {
 import axios from 'axios';
 
 const Example = (props) => {
+  const[user, setUser] = useState();
+  const[userTrip, setUserTrip] = useState();
   const[list, setList] = useState([]);
 
-  const userTrip = () => {
+  useEffect(() => {
+    setUser(JSON.parse(localStorage.getItem('user')));
+    setUserTrip(user);
+    JSON.parse(localStorage.getItem(userTrip)) === null ? localStorage.setItem(userTrip, JSON.stringify(list)) : setList(JSON.parse(localStorage.getItem(userTrip)))
+  })
+
+  const userTripAdd = () => {
     let title = document.getElementById('yourTrip').value;
     const arr = [...list];
         arr.push(title);
         setList(arr);
+        localStorage.setItem(userTrip, JSON.stringify(arr));
     // axios({
     //   method: "POST",
     //   data: {
@@ -34,7 +43,7 @@ const Example = (props) => {
     <div className="container">
       <div className="row">
         <div className="col-12 py-5">
-          <h1>Welcome {name}</h1>
+          <h1>Welcome {user}</h1>
         </div>
       </div>
       <div className="row">
@@ -63,6 +72,7 @@ const Example = (props) => {
                 placeholder="date placeholder"
               />
             </FormGroup>
+            <Button onClick={userTripAdd}>Create Checklist</Button>
           </Form>
         </div>
         <div className="col-3">
@@ -73,7 +83,7 @@ const Example = (props) => {
           <h3>User Checklist</h3>
           <ul className="userChecklistItem">
             {list.map(item => (
-              <li><Button className="btn btn-block btn-sm btn-dark"><Link to="/checklist">{item}</Link></Button></li>
+              <li><Button style={{background: 'linear-gradient(to bottom, #ece9e6, #ffffff)' ,borderRadius: '4px', opacity: '.6'}}><Link to="/checklist">{item}</Link></Button></li>
             ))}
           </ul>
         </div>
