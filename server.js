@@ -64,9 +64,9 @@ app.post("/api/login", (req, res, next) => {
   })(req, res, next);
 });
 
-app.get('/api/logout', function(req, res){
+app.get('/logout', function(req, res){
   req.logout();
-  res.redirect('/login');
+  res.json(true);
 });
 
 app.post("/api/register", (req, res) => {

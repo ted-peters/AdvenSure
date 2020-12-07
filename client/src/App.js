@@ -50,8 +50,8 @@ export default function App() {
             <Route exact path="/">
               {
                 !authState.isLoggedIn
-                  ? <Login />
-                  : <Redirect to="/user" />
+                  ? <Register />
+                  : <Redirect to="/login" />
               }
             </Route>
             <Route path = "/logout">
