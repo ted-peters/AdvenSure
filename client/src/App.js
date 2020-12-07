@@ -16,6 +16,7 @@ import Logout from './pages/Logout/logout';
 import Checklist from './pages/checklist/CheckList';
 import { useAuth, actions } from './utils/authState';
 import UserPage from './pages/UserPage'
+import ErrorPage from './pages/ErrorPage/ErrorPage'
 
 
 export default function App() {
@@ -73,6 +74,9 @@ export default function App() {
         </Route>
         <Route path="/user">
           <UserPage />
+        </Route>
+        <Route path="/error">
+          <ErrorPage />
         </Route>
           </Switch>
           <Footer />
