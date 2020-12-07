@@ -75,7 +75,7 @@ export default function App() {
         <Route path="/user">
           <UserPage />
         </Route>
-        <Route path="/error">
+        <Route path="*">
           <ErrorPage />
         </Route>
           </Switch>
