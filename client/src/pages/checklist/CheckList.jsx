@@ -125,7 +125,7 @@ export default function CheckList() {
                             <Button onClick={handleClick} style={{borderRadius: '4px', background: 'linear-gradient(to top, #2193b0, #3a7bd5' ,marginTop: '15px', opacity: '.6'}}>Add Item</Button>
                             <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
                                 <DropdownToggle nav caret type="button" style={{background: 'linear-gradient(to bottom, #ece9e6, #ffffff)' ,borderRadius: '4px', marginTop: '15px', marginLeft: '120px', opacity: '.6'}}>
-                                    Curated Lists
+                                    Pre-Curated Lists
                                 </DropdownToggle>
                                 <DropdownMenu style={{background: 'linear-gradient(to bottom, #ece9e6, #ffffff)', opacity: '.9'}}>
                                     <DropdownItem onClick={addBasics}>Travel Basics</DropdownItem>
