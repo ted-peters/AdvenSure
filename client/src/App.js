@@ -11,7 +11,7 @@ import Nav from './comp/Nav/Nav';
 import Footer from './comp/Footer/Footer';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
-import Weather from './pages/Weather';
+import Weather from './pages/Weather/App';
 import Logout from './pages/Logout/logout';
 import Checklist from './pages/checklist/CheckList';
 import { useAuth, actions } from './utils/authState';
