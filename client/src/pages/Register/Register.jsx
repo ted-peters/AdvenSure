@@ -12,7 +12,7 @@ function Register() {
   const refreshPage = () => {
     window.location.href="/login";
   }
-
+  
   const register = () => {
     axios({
       method: "POST",
@@ -25,6 +25,11 @@ function Register() {
       url: "/api/register",
     }).then(localStorage.setItem("user", JSON.stringify(registerUsername))).then(refreshPage())
   };
+  const handleKeyPress = (target) => {
+    if(target.charCode==13){
+      register();    
+    } 
+  }
   return (
     <div className="container text-center" body inverse style={{ padding: '25px' }}>
       <div className="row">
@@ -51,6 +56,7 @@ function Register() {
             className="input"
             placeholder="Password"
             onChange={(e) => setRegisterPassword(e.target.value)}
+            onKeyPress={handleKeyPress}
           />
           <row className="d-flex justify-content-center">
             <Button className="button" size="sm" style={{ color: 'black' }} onClick={register}>Register</Button>
