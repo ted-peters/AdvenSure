@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { Row, Input, Button, Card, CardTitle, } from "reactstrap";
+import { Row, Input, Button, Card, CardTitle, Form, FormGroup, Label, FormText } from "reactstrap";
 import './Login.css'
 
 function Login() {
@@ -11,8 +11,8 @@ function Login() {
 
   const refreshPage = () => {
     window.location.href="/user";
-  }
-
+  };
+  
   const login = () => {
     axios({
       method: "POST",
@@ -24,8 +24,13 @@ function Login() {
       url: "/api/login",
     }).then(localStorage.setItem("user", JSON.stringify(loginUsername))).then(refreshPage())
   };
-
+  const handleKeyPress = (target) => {
+    if(target.charCode==13){
+      login();    
+    } 
+  }
   return (
+    <Form>
     <div className="loginBody">
       <div className="container text-center">
         <div className="row">
@@ -47,6 +52,8 @@ function Login() {
               className="input"
               placeholder="password"
               onChange={(e) => setLoginPassword(e.target.value)}
+              onKeyPress= {handleKeyPress} 
+              
             />
             <row className="d-flex justify-content-center">
               <Button className="button" size="sm" style={{ color: 'black' }} onClick={login}>Login</Button>
@@ -66,6 +73,7 @@ function Login() {
         </Container>
       </Row> */}
     </div>
+    </Form>
   );
 }
 
