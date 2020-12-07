@@ -38,18 +38,18 @@ function Login() {
         <Row>
           <Card className="card" body inverse style={{ backgroundColor: 'transparent', borderColor: 'transparent' }}>
             <CardTitle className="font"style={{borderRadius: '100px'}}>Welcome Back</CardTitle>
-            <Input
+            <Input style={{borderRadius: '100px'}}
               className="input"
               placeholder="username"
               onChange={(e) => setLoginUsername(e.target.value)}
             />
-            <Input
+            <Input style={{borderRadius: '100px'}}
               className="input"
               placeholder="password"
               onChange={(e) => setLoginPassword(e.target.value)}
             />
             <row className="d-flex justify-content-center">
-              <Button className="button" size="sm" style={{ borderRadius: '100px', color: 'black' }} onClick={login}>Login</Button>
+              <Button className="button" size="sm" style={{borderRadius: '100px', color: 'black' }} onClick={login}>Login</Button>
             </row>
           </Card>
         </Row>
