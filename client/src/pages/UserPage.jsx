@@ -19,7 +19,7 @@ const Example = (props) => {
     setUser(JSON.parse(localStorage.getItem('user')));
     setUserTrip(user);
     JSON.parse(localStorage.getItem(userTrip)) === null ? localStorage.setItem(userTrip, JSON.stringify(list)) : setList(JSON.parse(localStorage.getItem(userTrip)))
-  })
+  }, userTrip);
 
   const userTripAdd = () => {
     let title = document.getElementById('yourTrip').value;
@@ -38,11 +38,13 @@ const Example = (props) => {
     //   url: "/api/user",
     // });
   };
-  const handleKeyPress = (target) => {
-    if(target.charCode==13){
-      userTripAdd();    
-    } 
+
+  const tripClick = (e) => {
+    console.log(e.target.value);
+    localStorage.setItem("userTripChecklist", JSON.stringify(`${user}${e.target.value}`))
+    window.location.href="/checklist";
   }
+
   const {name} = useParams();
   return (
     <div className="container">
@@ -75,7 +77,6 @@ const Example = (props) => {
                 name="date"
                 id="tripReturn"
                 placeholder="date placeholder"
-                onKeyPress={handleKeyPress}
               />
             </FormGroup>
             <Button onClick={userTripAdd}>Create Checklist</Button>
@@ -89,7 +90,7 @@ const Example = (props) => {
           <h3>User Checklist</h3>
           <ul className="userCheckListItem">
             {list.map(item => (
-              <li><Button style={{background: 'linear-gradient(to bottom, #ece9e6, #ffffff)' ,borderRadius: '4px', opacity: '.6'}}><Link to="/checklist">{item}</Link></Button></li>
+              <li><Button style={{borderRadius: '4px', opacity: '.6'}} onClick={tripClick} value={item}>{item}</Button></li>
             ))}
           </ul>
         </div>
