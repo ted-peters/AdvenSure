@@ -50,31 +50,39 @@ export default function CheckList() {
         deleteItemChecked(e);
     }
     // adding item lists
-    const addEssentials = () => {
-        const itemslist = ["toothbrush", "toothpaste", "hairbrush", "deoderant", "underwear", "socks", "shirts", "pants"];
+    const addBasics = () => {
+        const itemslist = ["headphones & charger", "chewing gum", "snacks", "travel pillow", "wallet", "credit/debit cards", "drivers liscends", "flight ticket/confirmations", "passport/visa", "cash", "foreign currency", "lip balm", "hand sanitizer", "mask", "pain reliever", "sunglasses"];
         const arr = [...list];
         console.log(arr);
         const newitemslist = itemslist.concat(arr);
         setList(newitemslist);
     }
     const addTechnology = () => {
-        const itemslist = ["charger", "laptop"];
+        const itemslist = ["portable charger & cables", "phone & charger", "tablet & charger", "laptop & charger", "camera & charger", "power adapter", "audiobooks", "podcasts", "movies", "music", "downloaded Netflix shows"];
         const arr = [...list];
         console.log(arr);
         const newitemslist = itemslist.concat(arr);
         setList(newitemslist);      
     }
 
-    const addColdWeather = () => {
-        const itemslist = ["beanie", "heavy jacket", "long underwear", "hand warmers"];
+    const addClothes = () => {
+        const itemslist = ["underwear", "socks", "sleepwear", "outerwear", "t-shirts", "jeans", "shorts", "excersize clothes", "swimsuit", "shoes", "flip-flops"];
         const arr = [...list];
         console.log(arr);
         const newitemslist = itemslist.concat(arr);
         setList(newitemslist);
     }
 
-    const addBeach = () => {
-        const itemslist = ["sunscreen", "tank-top", "margarita mix", "snacks", "sunglasses"];
+    const addHygiene = () => {
+        const itemslist = ["toothbrush", "toothpaste", "deodorant", "shampoo & conditioner", "cleanser", "hair brush/comb", "styling products", "perfume/cologne", "razor", "shaving cream", "q-tips", "tweezers", "medications", "pain reliever", "medications", "vitamins", "contacts & solution"];
+        const arr = [...list];
+        console.log(arr);
+        const newitemslist = itemslist.concat(arr);
+        setList(newitemslist);
+    }
+
+    const addFeminine = () => {
+        const itemslist = ["jewelry", "makeup", "makeup remover", "face wash", "moisturizer", "curling/flat iron", "skincare", "tampons/pads", "birth control", "body lotion"];
         const arr = [...list];
         console.log(arr);
         const newitemslist = itemslist.concat(arr);
@@ -82,20 +90,27 @@ export default function CheckList() {
     }
 
     const addBusiness = () => {
-        const itemslist = ["professional wear", "laptop", "portfolio", "roladex"];
+        const itemslist = ["blazers", "business-casual attire", "suit", "professional wear", "work documents", "office supplies", "notebook", "glasses & case", "umbrella"];
+        const arr = [...list];
+        console.log(arr);
+        const newitemslist = itemslist.concat(arr);
+        setList(newitemslist);
+    }
+    const addBeach = () => {
+        const itemslist = ["sunscreen", "tank tops", "bathing suits", "hat", "goggles", "snorkels", "cover-up", "books",];
+        const arr = [...list];
+        console.log(arr);
+        const newitemslist = itemslist.concat(arr);
+        setList(newitemslist);
+    }
+    const addCold = () => {
+        const itemslist = ["scarves", "beanies/hats", "layering shirts & pants", "gloves", "warm shirts & pants", "ear muffs", "thermal socks", "sweaters", "heavy coat", "boots", "hand warmers", "thermos", "polar bear maze"];
         const arr = [...list];
         console.log(arr);
         const newitemslist = itemslist.concat(arr);
         setList(newitemslist);
     }
 
-    const addAdventure = () => {
-        const itemslist = ["kayak", "chacos", "climbing gear", "good-times"];
-        const arr = [...list];
-        console.log(arr);
-        const newitemslist = itemslist.concat(arr);
-        setList(newitemslist);
-    }
 
 
     return (
@@ -105,25 +120,29 @@ export default function CheckList() {
                     <div className="col-12">
                     <Form>
                         <FormGroup>
-                            <Input type="text" body inverse style={{ color: 'black', opacity: '.6', borderRadius: '4px'}}name="checklist" id="examplechecklist" placeholder="Need to pack" value={item}onChange={handleChange} />
+                            <Input type="text" body inverse style={{ color: 'black', opacity: '.6', borderRadius: '4px'}}name="checklist" id="examplechecklist" placeholder="Mix and match items from our curated lists, or add your own here" value={item}onChange={handleChange} />
                             <Nav>
                             <Button onClick={handleClick} style={{borderRadius: '4px', background: 'linear-gradient(to top, #2193b0, #3a7bd5' ,marginTop: '15px', opacity: '.6'}}>Add Item</Button>
                             <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
                                 <DropdownToggle nav caret type="button" style={{background: 'linear-gradient(to bottom, #ece9e6, #ffffff)' ,borderRadius: '4px', marginTop: '15px', marginLeft: '120px', opacity: '.6'}}>
-                                    Quick Add Lists
+                                    Pre-Curated Lists
                                 </DropdownToggle>
                                 <DropdownMenu style={{background: 'linear-gradient(to bottom, #ece9e6, #ffffff)', opacity: '.9'}}>
-                                    <DropdownItem onClick={addEssentials}>Travel Essentials</DropdownItem>
+                                    <DropdownItem onClick={addBasics}>Travel Basics</DropdownItem>
                                     <DropdownItem divider />
-                                    <DropdownItem onClick={addTechnology}>Technology</DropdownItem>
+                                    <DropdownItem onClick={addTechnology}>Technology/Entertainment</DropdownItem>
                                     <DropdownItem divider />
-                                    <DropdownItem onClick={addColdWeather}>Cold Weather</DropdownItem>
+                                    <DropdownItem onClick={addClothes}>Clothes</DropdownItem>
                                     <DropdownItem divider />
-                                    <DropdownItem onClick={addBeach}>Beach</DropdownItem>
+                                    <DropdownItem onClick={addHygiene}>Toiletry</DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem onClick={addFeminine}>Feminine Travel Necesseties</DropdownItem>
                                     <DropdownItem divider />
                                     <DropdownItem onClick={addBusiness}>Business</DropdownItem>
                                     <DropdownItem divider />
-                                    <DropdownItem onClick={addAdventure}>Adventure</DropdownItem>
+                                    <DropdownItem onClick={addBeach}>Beach Essentials</DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem onClick={addCold}>Cold Weather</DropdownItem>
                                     <DropdownItem divider />
                                 </DropdownMenu>
                             </Dropdown>
@@ -133,7 +152,7 @@ export default function CheckList() {
                     </div>
                 </div>
             </div>
-            <Row style={{borderRadius: '6px', background: 'linear-gradient(to bottom, #ece9e6, #ffffff)', opacity: '.6', marginTop: '6px'}}>
+            <Row style={{borderRadius: '6px', background: 'linear-gradient(to bottom, #ece9e6, #ffffff)', opacity: '.7', marginTop: '6px'}}>
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-12 col-md-6">
