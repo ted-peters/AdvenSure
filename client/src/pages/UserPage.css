@@ -1,0 +1,35 @@
+.trip {
+    background-color: white;
+    opacity: .7;
+    padding: 15px;
+    border: lightblue;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+}
+
+.welcome {
+    color: lightgoldenrodyellow;
+    text-shadow: 2px 2px 5px darkblue;
+}
+
+.db {
+    background-color: white;
+    opacity: .7;
+    margin: 10px;
+}
+
+.list {
+    text-align: center;
+    color: lightgoldenrodyellow;
+    text-shadow: 2px 2px 5px darkblue;
+    font-size: 22px;
+}
+
+.userCheckListItem {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-right: 26px;
+    
+}
