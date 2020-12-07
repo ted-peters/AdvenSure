@@ -22,7 +22,7 @@ function Login() {
       },
       withCredentials: true,
       url: "/api/login",
-    }).then(refreshPage())
+    }).then(localStorage.setItem("user", JSON.stringify(loginUsername))).then(refreshPage())
   };
 
   return (
