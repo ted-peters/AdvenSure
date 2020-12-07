@@ -112,18 +112,18 @@ function Nav() {
                                         className={window.location.pathname === "/logout" ? "nav-link active" : "nav-link"}
                                     > Logout</Link> */}
                                     <button style={{
-                                        fontSize: "20px",
-                                        color: "black",
-                                        borderRadius: "80px",
-                                        background: "linear-gradient(to top, #2193b0, #3a7bd5",
-                                        // background: "linear-gradient(to top, #2193b0, #3a7bd5",
-                                        marginTop: "20px",
-                                        marginLeft: "10px",
-                                        opacity: ".5",
-                                        height: "50px",
-                                        border: "none",
-                                        boxShadow: "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",
-                                    }} onClick={refreshPage}>Logout</button>
+                                            fontSize: "18px",
+                                            color: "white",
+                                            opacity: ".6",
+                                            borderRadius: "40px",
+                                            background: "linear-gradient(to top, #2193b0, #3a7bd5",
+                                            marginTop: "16px",
+                                            marginLeft: "5px",
+                                            height: "40px",
+                                            border: "none",
+                                            boxShadow:  "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",
+                                         }}
+                                 onClick={refreshPage}>Logout</button>
                                 </li>
                             </Route>
                             <Route path="/checklist">
@@ -135,30 +135,29 @@ function Nav() {
                                         className={window.location.pathname === "/logout" ? "nav-link active" : "nav-link"}
                                     > Logout</Link> */}
                                     <button style={{
-                                        fontSize: "20px",
-                                        color: "white",
-                                        borderRadius: "80px",
-                                        background: "linear-gradient(to top, #2193b0, #3a7bd5",
-                                        // background: "linear-gradient(to top, #2193b0, #3a7bd5",
-                                        marginTop: "20px",
-                                        marginLeft: "10px",
-                                        opacity: ".5",
-                                        height: "50px",
-                                        border: "none",
-                                        boxShadow: "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",
-                                    }} onClick={userPage}>My Trips</button>
+                                            fontSize: "16px",
+                                            color: "white",
+                                            opacity: ".6",
+                                            borderRadius: "17px",
+                                            background: "linear-gradient(to top, #2193b0, #3a7bd5",
+                                            marginTop: "10px",
+                                            marginRight: "6px",
+                                            marginLeft: "5px",
+                                            height: "37px",
+                                            border: "none",
+                                            boxShadow:  "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",
+                    }} onClick={userPage}>My Trips</button>
                                     <button style={{
-                                        fontSize: "20px",
-                                        color: "white",
-                                        borderRadius: "80px",
-                                        background: "linear-gradient(to top, #2193b0, #3a7bd5",
-                                        // background: "linear-gradient(to top, #2193b0, #3a7bd5",
-                                        marginTop: "20px",
-                                        marginLeft: "10px",
-                                        opacity: ".5",
-                                        height: "50px",
-                                        border: "none",
-                                        boxShadow: "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",
+                                            fontSize: "15px",
+                                            color: "white",
+                                            opacity: ".6",
+                                            borderRadius: "17px",
+                                            background: "linear-gradient(to top, #2193b0, #3a7bd5",
+                                            marginTop: "16px",
+                                            marginLeft: "10px",
+                                            height: "37px",
+                                            border: "none",
+                                            boxShadow:  "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",
                                     }} onClick={refreshPage}>Logout</button>
 
                                 </li>

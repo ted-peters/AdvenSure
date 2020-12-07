@@ -301,13 +301,15 @@ export default function CheckList() {
                     onClick={handleClick}
                     style={{
                       fontSize: "20px",
-                      color: "black",
+                      color: "white",
+                      borderRadius: "4px",
+                      marginTop: "15px",
+                      opacity: ".6",
                       borderRadius: "80px",
                       background: "linear-gradient(45deg, #d0ccba, #afac9d)",
-                      // background: "linear-gradient(to top, #2193b0, #3a7bd5",
+                      background: "linear-gradient(to top, #2193b0, #3a7bd5",
                       marginTop: "20px",
                       marginLeft: "10px",
-                      opacity: ".5",
                       height: "50px",
                       border: "none",
                       boxShadow:  "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",
