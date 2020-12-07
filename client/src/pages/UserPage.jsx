@@ -57,7 +57,7 @@ const Example = (props) => {
       <div className="row">
         <div className="col-3"></div>
         <div className="col-6 trip">
-          <h3>Create New Trip</h3>
+          <h4>Create New Trip</h4>
           <Form>
             <FormGroup>
               <Label for="yourTrip">Your Trip</Label>
