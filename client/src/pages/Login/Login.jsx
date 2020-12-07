@@ -27,7 +27,11 @@ function Login() {
       url: "/api/login",
     }).then(localStorage.setItem("user", JSON.stringify(loginUsername))).then(refreshPage())
   };
-
+  const handleKeyPress = (target) => {
+    if(target.charCode==13){
+      register();    
+    } 
+  }
   return (
     <div className="loginBody">
         <div className="container text-center">
@@ -52,6 +56,7 @@ function Login() {
               className="input"
               placeholder="password"
               onChange={(e) => setLoginPassword(e.target.value)}
+              onKeyPress={handleKeyPress}
             />
             <row className="d-flex justify-content-center">
               <Button className="button" size="sm" style={{ borderRadius: '100px', color: 'black' }} onClick={login}>Login</Button>
