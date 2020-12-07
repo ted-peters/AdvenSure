@@ -41,7 +41,7 @@ function Register() {
       </div>
       <Row>
         <Card className="card" body inverse style={{ backgroundColor: 'transparent', borderColor: 'transparent' }}>
-          <CardTitle className="font" body inverse style={{ color: 'black', opacity: '.7' }}>New User</CardTitle>
+          <CardTitle className="font" body inverse style={{ color: 'black', opacity: '.7' }}>Welcome</CardTitle>
           <Input
             className="input"
             placeholder="Name"
@@ -59,11 +59,11 @@ function Register() {
             onKeyPress={handleKeyPress}
           />
           <row className="d-flex justify-content-center">
-            <Button className="button" size="sm" style={{ color: 'black' }} onClick={register}>Register</Button>
+            <Button className="button" size="sm" style={{ borderRadius: '100px', color: 'black' }} onClick={register}>Register</Button>
           </row>
         </Card>
       </Row>
-      <p className="text-center">If you already have a log in information, please <Link to="/login">Log In</Link></p>
+      <p className="text-center">Already have an account? <Link to="/login">Log In</Link ></p>
     </div>
   );
 }

@@ -120,11 +120,11 @@ export default function CheckList() {
                     <div className="col-12">
                     <Form>
                         <FormGroup>
-                            <Input type="text" body inverse style={{ color: 'black', opacity: '.6', borderRadius: '4px'}}name="checklist" id="examplechecklist" placeholder="Mix and match items from our curated lists, or add your own here" value={item}onChange={handleChange} />
+                            <Input type="text" body inverse style={{ color: 'black', opacity: '.6', borderRadius: '100px'}}name="checklist" id="examplechecklist" placeholder="Mix and match items from our curated lists, or add your own here" value={item}onChange={handleChange} />
                             <Nav>
-                            <Button onClick={handleClick} style={{borderRadius: '4px', background: 'linear-gradient(to top, #2193b0, #3a7bd5' ,marginTop: '15px', opacity: '.6'}}>Add Item</Button>
+                            <Button onClick={handleClick} style={{borderRadius: '100px', background: 'linear-gradient(to top, #2193b0, #3a7bd5' ,marginTop: '15px', opacity: '.6'}}>Add Item</Button>
                             <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
-                                <DropdownToggle nav caret type="button" style={{background: 'linear-gradient(to bottom, #ece9e6, #ffffff)' ,borderRadius: '4px', marginTop: '15px', marginLeft: '120px', opacity: '.6'}}>
+                                <DropdownToggle nav caret type="button" style={{background: 'linear-gradient(to bottom, #ece9e6, #ffffff)' ,borderRadius: '100px', marginTop: '15px', marginLeft: '120px', opacity: '.6'}}>
                                     Pre-Curated Lists
                                 </DropdownToggle>
                                 <DropdownMenu style={{background: 'linear-gradient(to bottom, #ece9e6, #ffffff)', opacity: '.9'}}>
@@ -201,7 +201,7 @@ export default function CheckList() {
                 <div><input type="checkbox"></input><label>Swimsuits</label></div>
                 </Col> */}
             </Row>
-            <Button onClick={handleClick} style={{borderRadius: '4px', background: 'linear-gradient(to top, #2193b0, #3a7bd5' ,marginTop: '15px', opacity: '.6'}}>Save Checklist</Button>
+            <Button onClick={handleClick} style={{borderRadius: '100px', background: 'linear-gradient(to top, #2193b0, #3a7bd5' ,marginTop: '15px', opacity: '.6'}}>Save Checklist</Button>
         </Container>
     )
 }
