@@ -10,7 +10,7 @@ function Register() {
   const [registerPassword, setRegisterPassword] = useState("");
 
   const refreshPage = () => {
-    window.location.href="/user";
+    window.location.href="/login";
   }
 
   const register = () => {
