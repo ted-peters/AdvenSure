@@ -42,17 +42,17 @@ function Register() {
       <Row>
         <Card className="card" body inverse style={{ backgroundColor: 'transparent', borderColor: 'transparent' }}>
           <CardTitle className="font" body inverse style={{ color: 'black', opacity: '.7' }}>Welcome</CardTitle>
-          <Input
+          <Input style={{borderRadius: '100px'}}
             className="input"
             placeholder="Name"
             onChange={(e) => setRegisterUsername(e.target.value)}
           />
-          <Input
+          <Input style={{borderRadius: '100px'}}
             className="input"
             placeholder="Email"
             onChange={(e) => setRegisterEmail(e.target.value)}
           />
-          <Input
+          <Input style={{borderRadius: '100px'}}
             className="input"
             placeholder="Password"
             onChange={(e) => setRegisterPassword(e.target.value)}
