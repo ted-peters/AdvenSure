@@ -29,7 +29,7 @@ function Login() {
   };
   const handleKeyPress = (target) => {
     if(target.charCode==13){
-      register();    
+      login();    
     } 
   }
   return (
