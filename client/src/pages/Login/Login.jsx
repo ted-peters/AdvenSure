@@ -40,7 +40,7 @@ function Login() {
             <Fade in={fadeIn} tag="h5" className="mt-3">
               <h1>AdvenSure</h1>
               <p>Where opportunity meets preparation.</p>
-              <hr />
+              
               </Fade>
             </div>
           </div>
