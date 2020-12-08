@@ -25,6 +25,10 @@ export default function CheckList() {
   let packedTrip = `${newUserChecklist}packed`;
   let unpackedTrip = `${newUserChecklist}unpacked`;
 
+  const userPage = () => {
+    window.location.href = "/user";
+}
+
   useEffect(() => {
     setUserChecklist(JSON.parse(localStorage.getItem("userTripChecklist")));
     setNewUserChecklist(userChecklist);
@@ -377,6 +381,17 @@ export default function CheckList() {
           </div>
         </div>
       </div>
+      <Button
+        onClick={userPage}
+        style={{
+          borderRadius: "4px",
+          background: "linear-gradient(to top, #2193b0, #3a7bd5",
+          marginTop: "15px",
+          opacity: ".6",
+        }}
+      >
+        Back to My Trips
+      </Button>
       <Row
         style={{
           borderRadius: "6px",
@@ -477,17 +492,7 @@ export default function CheckList() {
                 <div><input type="checkbox"></input><label>Swimsuits</label></div>
                 </Col> */}
       </Row>
-      <Button
-        onClick={handleClick}
-        style={{
-          borderRadius: "4px",
-          background: "linear-gradient(to top, #2193b0, #3a7bd5",
-          marginTop: "15px",
-          opacity: ".6",
-        }}
-      >
-        Save Checklist
-      </Button>
+      
     </Container>
   );
 }

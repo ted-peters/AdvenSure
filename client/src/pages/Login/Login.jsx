@@ -13,7 +13,10 @@ function Login() {
   const [isLoggedin, setIsLoggedIn] = useState();
   const [fadeIn, setFadeIn] = useState(true);
   const refreshPage = () => {
-    window.location.href = "/user";
+    isLoggedin ? 
+    window.location.href = "/user"
+    : window.location.href = "/login"
+    
   }
 
   const login = () => {
