@@ -4,9 +4,9 @@ const path= require('path');
 const router = require('express').Router();
 const passport = require("passport");
 
-// const apiRoutes = require("./apiRoutes");
-// //link api
-// router.use('/api', apiRoutes);
+const apiRoutes = require("./apiRoutes");
+//link api
+router.use('/api', apiRoutes);
 
 router.use(function(req, res){
     res.sendFile(path.join(__dirname, '../client/build/index.html'))

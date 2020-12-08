@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import "./App.css"
 import axios from 'axios';
-import NavHome from './comp/Nav/NavHome';
 import Nav from './comp/Nav/Nav';
 import Footer from './comp/Footer/Footer';
 import Login from './pages/Login/Login';
@@ -40,10 +39,9 @@ export default function App() {
     <div>
       <Router>
         <div>
-
+          <Nav />
           <Switch>
             <Route exact path="/login">
-              <NavHome />
               {
                 !authState.isLoggedIn
                   ? <Login />
@@ -51,41 +49,35 @@ export default function App() {
               }
             </Route>
             <Route exact path="/">
-              <NavHome />
               {
                 !authState.isLoggedIn
                   ? <Register />
                   : <Redirect to="/login" />
               }
             </Route>
-            <Route path="/logout">
+            <Route path = "/logout">
               {
                 !authState.isLoggedIn
-                  ? <Redirect to="/login" />
-                  : <p className="text-center">You are logged in</p>
+                  ?<Redirect to="/login" />
+                  :<p className="text-center">You are logged in</p>
               }
-              <Logout />
+              <Logout/>
             </Route>
             <Route path="/register">
-              <NavHome />
-              <Register />
-            </Route>
-            <Route path="/checklist">
-              <Nav />
-              <Checklist />
-            </Route>
-            <Route path="/weather">
-              <Nav />
-              <Weather />
-            </Route>
-            <Route path="/user">
-              <Nav />
-              <UserPage />
-            </Route>
-            <Route path="*">
-              <NavHome />
-              <ErrorPage />
-            </Route>
+          <Register />
+        </Route>
+        <Route path="/checklist">
+          <Checklist />
+        </Route>
+        <Route path="/weather">
+          <Weather />
+        </Route>
+        <Route path="/user">
+          <UserPage />
+        </Route>
+        <Route path="*">
+          <ErrorPage />
+        </Route>
           </Switch>
           <Footer />
         </div>
