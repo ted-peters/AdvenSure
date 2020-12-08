@@ -279,7 +279,7 @@ export default function CheckList() {
   };
 
   return (
-    <Container style={{ marginBottom: "100px" }}>
+    <Container flex={true} style={{ marginBottom: "100px" }}>
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -296,39 +296,21 @@ export default function CheckList() {
                   value={item}
                   onChange={handleChange}
                 />
-                <Nav>
-                  <Button 
-                    onClick={handleClick}
-                    style={{
-                      fontSize: "20px",
-                      color: "white",
-                      borderRadius: "4px",
-                      marginTop: "15px",
-                      opacity: ".6",
-                      borderRadius: "80px",
-                      background: "linear-gradient(45deg, #d0ccba, #afac9d)",
-                      background: "linear-gradient(to top, #2193b0, #3a7bd5",
-                      marginTop: "20px",
-                      marginLeft: "10px",
-                      height: "50px",
-                      border: "none",
-                      boxShadow:  "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",
-                    }}
-                  >
-                    Add Item
-                  </Button>​
+                <Nav>​
                   <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
                     <DropdownToggle
                       nav
                       caret
                       type="button"
                       style={{
-                        background:
-                          "linear-gradient(to bottom, #ece9e6, #ffffff)",
-                        borderRadius: "200px",
-                        marginTop: "15px",
-                        marginLeft: "120px",
-                        opacity: ".6",
+                        color: "white",
+                        background: "#7F7CAF",
+                        fontSize:"15px",
+                        borderRadius: "80px",
+                        marginTop: "25px",
+                        marginLeft: "1px",
+                        marginBottom: "10px",
+                        opacity: ".9",
                       }}
                     >
                       Pre-Curated Lists
@@ -337,7 +319,7 @@ export default function CheckList() {
                       style={{
                         borderRadius: "10px",
                         background:
-                          "linear-gradient(to bottom, #ece9e6, #ffffff)",
+                        "linear-gradient(to top, #7F7CAF, #89BADA, #6CACD8",
                         opacity: ".9",
                       }}
                     >
@@ -371,6 +353,25 @@ export default function CheckList() {
                       <DropdownItem divider />
                     </DropdownMenu>
                   </Dropdown>
+                  <Button 
+                    onClick={handleClick}
+                    style={{
+                      fontSize: "15px",
+                      color: "gray",
+                      width: "165px",
+                      borderRadius: "4px",
+                      opacity: ".9",
+                      borderRadius: "80px",
+                      background: "linear-gradient(to left, #FFED86, #E8C564)",
+                      marginTop: "25px",
+                      marginLeft: "28px",
+                      height: "38px",
+                      border: "none",
+                      boxShadow:  "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",
+                    }}
+                  >
+                    Add Item
+                  </Button>
                 </Nav>
               </FormGroup>
             </Form>
@@ -448,7 +449,7 @@ export default function CheckList() {
                           </td>
                           <td>{item}</td>
                           <td>
-                            <button onClick={deleteItemChecked} name={item}>
+                            <button style={{border: "none"}}onClick={deleteItemChecked} name={item}>
                               X
                             </button>
                           </td>
@@ -463,21 +464,8 @@ export default function CheckList() {
             </div>
           </div>
         </div>
-
-        {/* <Col>
-                <div><input type="checkbox"></input><label>Phone Charger</label></div>
-                <div><input type="checkbox"></input><label>Deoderant</label></div>
-                <div><input type="checkbox"></input><label>Underwear</label></div>
-                <div><input type="checkbox"></input><label>Socks</label></div>
-                <div><input type="checkbox"></input><label>Shirts</label></div>
-                <div><input type="checkbox"></input><label>Pants</label></div>
-                <div><input type="checkbox"></input><label>Shoes</label></div>
-                <div><input type="checkbox"></input><label>Medications</label></div>
-                <div><input type="checkbox"></input><label>Jackets</label></div>
-                <div><input type="checkbox"></input><label>Swimsuits</label></div>
-                </Col> */}
       </Row>
-      <Button
+      {/* <Button
         onClick={handleClick}
         style={{
           borderRadius: "4px",
@@ -487,7 +475,7 @@ export default function CheckList() {
         }}
       >
         Save Checklist
-      </Button>
+      </Button> */}
     </Container>
   );
 }
