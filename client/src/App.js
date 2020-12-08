@@ -55,29 +55,29 @@ export default function App() {
                   : <Redirect to="/login" />
               }
             </Route>
-            <Route path = "/logout">
+            <Route path="/logout">
               {
                 !authState.isLoggedIn
-                  ?<Redirect to="/login" />
-                  :<p className="text-center">You are logged in</p>
+                  ? <Redirect to="/login" />
+                  : <p className="text-center">You are logged in</p>
               }
-              <Logout/>
+              <Logout />
             </Route>
             <Route path="/register">
-          <Register />
-        </Route>
-        <Route path="/checklist">
-          <Checklist />
-        </Route>
-        <Route path="/weather">
-          <Weather />
-        </Route>
-        <Route path="/user">
-          <UserPage />
-        </Route>
-        <Route path="*">
-          <ErrorPage />
-        </Route>
+              <Register />
+            </Route>
+            <Route path="/checklist">
+              <Checklist />
+            </Route>
+            <Route path="/weather">
+              <Weather />
+            </Route>
+            <Route path="/user">
+              <UserPage />
+            </Route>
+            <Route path="*">
+              <ErrorPage />
+            </Route>
           </Switch>
           <Footer />
         </div>

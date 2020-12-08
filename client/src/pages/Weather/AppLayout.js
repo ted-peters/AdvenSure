@@ -90,7 +90,7 @@ const WeatherCard = props => {
   const { currentWeather, forecast, icon, recommendation } = props;
 
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} style={{opacity:"0.7"}}>
       <CardHeader
         title={currentWeather.city + ", " + currentWeather.country}
         subheader={<WeatherCardSubheader currentWeather={currentWeather} />}
