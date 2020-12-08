@@ -129,8 +129,8 @@ const Example = (props) => {
             <h3 class="list">User Checklist</h3>
             <ul className="userCheckListItem">
               {list.map(item => (
-                <li><Button style={{ border: "none", boxShadow: "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;", background: "linear-gradient(to top, #2193b0, #3a7bd5", borderRadius: "40px", fontSize: "16px", borderRadius: '4px', opacity: '.6'}} onClick={tripClick} value={item}>{item}</Button></li>
-              ))}
+                <li><Button style={{ border: "none", boxShadow: "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;", background: "linear-gradient(to top, #2193b0, #3a7bd5", borderRadius: "40px", fontSize: "16px", borderRadius: '4px', opacity: '.6', marginBottom: "10px"}} onClick={tripClick} value={item}>{item}</Button></li> 
+              ))} <br/>
             </ul>
           
         </div>
