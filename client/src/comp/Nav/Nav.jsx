@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 
 function Nav() {
+
   const refreshPage = () => {
     window.location.href = "/login";
   };
@@ -96,6 +97,7 @@ function Nav() {
       </nav>
     </Router>
   );
+
 }
 
 export default Nav;
