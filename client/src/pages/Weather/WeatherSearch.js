@@ -35,6 +35,7 @@ export default function WeatherSearch(props) {
   const handleSearch = event => {
     setSearching(true);
     setSearchTerm(event.target.value);
+    
   };
 
   useEffect(() => {

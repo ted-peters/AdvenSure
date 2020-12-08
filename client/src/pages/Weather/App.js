@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { createMuiTheme, Container, ThemeProvider } from "@material-ui/core";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import CssBaseline from "@material-ui/core/CssBaseline";
-
 import Weather from "./Weather";
+import Nav from "../../comp/Nav/Nav"
+
 export default function App() {
   const [city, setCity] = useState("Austin");
   const [error, setError] = useState(null);
@@ -39,11 +40,7 @@ export default function App() {
   const theme = createMuiTheme({
     typography: {
       fontFamily: [
-        "Inter",
-        "-apple-system",
-        "BlinkMacSystemFont",
-        '"Helvetica Neue"',
-        "Arial",
+        "Montserrat",
         "sans-serif",
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
