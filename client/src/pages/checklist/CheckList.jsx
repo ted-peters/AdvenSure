@@ -449,7 +449,7 @@ export default function CheckList() {
                           </td>
                           <td>{item}</td>
                           <td>
-                            <button style={{border: "none"}}onClick={deleteItemChecked} name={item}>
+                            <button onClick={deleteItemChecked} name={item}>
                               X
                             </button>
                           </td>
