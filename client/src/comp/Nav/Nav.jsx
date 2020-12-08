@@ -135,11 +135,11 @@ function Nav() {
                                         className={window.location.pathname === "/logout" ? "nav-link active" : "nav-link"}
                                     > Logout</Link> */}
                                     <button style={{
-                                            fontSize: "16px",
+                                            fontSize: "15px",
                                             color: "white",
-                                            opacity: ".6",
+                                            opacity: ".9",
                                             borderRadius: "17px",
-                                            background: "linear-gradient(to top, #2193b0, #3a7bd5",
+                                            background: "#7F7CAF",
                                             marginTop: "10px",
                                             marginRight: "6px",
                                             marginLeft: "5px",
@@ -150,9 +150,9 @@ function Nav() {
                                     <button style={{
                                             fontSize: "15px",
                                             color: "white",
-                                            opacity: ".6",
+                                            opacity: ".9",
                                             borderRadius: "17px",
-                                            background: "linear-gradient(to top, #2193b0, #3a7bd5",
+                                            background: "#7F7CAF",
                                             marginTop: "16px",
                                             marginLeft: "10px",
                                             height: "37px",

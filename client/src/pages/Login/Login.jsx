@@ -60,7 +60,7 @@ function Login() {
               onKeyPress={handleKeyPress}
             />
             <row className="d-flex justify-content-center">
-              <Button className="button" size="sm" style={{ borderRadius: '100px', color: 'black' }} onClick={login}>Login</Button>
+              <Button className="button" size="sm" style={{ background: "#7F7CAF", borderRadius: '100px', color: 'white', opacity: ".8", border: "none" }} onClick={login}>Login</Button>
             </row>
           </Card>
         </Row>
