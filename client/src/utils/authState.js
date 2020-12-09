@@ -25,7 +25,7 @@ function authReducer(authState, action){
                 isLoggedIn: false,
                 // displayName: ""
             }
-            break;
+            ;
         default:
             console.log("Unrecognized action", action.type);
             return authState;

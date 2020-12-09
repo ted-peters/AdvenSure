@@ -23,7 +23,7 @@ mongoose.connection.on('disconnected', function () { console.log("Mongo DB disco
 
 // connect front-end
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"));
+  app.use(express.static("client/build"));
 }
 
 // Middleware
@@ -64,13 +64,10 @@ app.post("/api/login", (req, res, next) => {
   })(req, res, next);
 });
 
-app.get('/api/logout/', (req, res) => {
-      req.logout(req.user._id, (err) => {
-        if (err) throw err;
-        res.send("Logged Out Succesfully");
-        console.log(req.user);
-      });
-    })
+app.get('/logout', function(req, res){
+  req.logout();
+  res.json(true);
+});
 
 app.post("/api/register", (req, res) => {
   User.findOne({ username: req.body.username }, async (err, doc) => {
@@ -81,6 +78,7 @@ app.post("/api/register", (req, res) => {
 
       const newUser = new User({
         username: req.body.username,
+        email: req.body.email,
         password: hashedPassword,
       });
       await newUser.save();
@@ -90,12 +88,12 @@ app.post("/api/register", (req, res) => {
 });
 
 app.get("/api/user", (req, res) => {
-  if (!req.user){
+  if (!req.user) {
     return res.status(401).json(false)
   } else {
     return res.json(req.user)
   }
-  
+
 });
 
 // express using router function which exporting from routes folder
@@ -104,7 +102,7 @@ app.use(router);
 //Start Server
 // .listen() function to run your domain name = advensure.com || advensure.herokuapp.com || advensure.github.io || localhost:3001
 app.listen(process.env.PORT || 3001, function () {
-    console.log('Express Server Listening on 3001');
+  console.log('Express Server Listening on 3001');
 })
 
 

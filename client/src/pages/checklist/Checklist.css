@@ -1,3 +1,70 @@
-.container{
-    
+.input {
+    width: 100%;
+    margin-top: 10px;
+    opacity: .7;
+    background: linear-gradient(to left, #ffefba, #ffffff);
 }
+
+/* .dropdownToggle {
+    background: linear-gradient(to top, #2193b0, #6dd5ed);
+} */
+/* width: "170px",
+borderRadius: "80px",
+background: "#ffb5ca",
+// marginTop: "15px",
+opacity: ".6",
+height: "70px",
+// margin: "300px 600px",
+fontSize: "40px",
+borderStyle: "none",
+color: "white",
+fontWeight: "400",
+boxShadow: "5px 5px 10px #de9db0, -5px -5px -10px #ffcde4", */
+/* .cloud {
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(hsla(0,0%,0%,0), hsla(0,0%,0%,.1));
+    border-radius: 1em;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.5);
+    display: inline-block;
+    height: 1em;
+    left: 50%;
+    margin-left: -1.5em;
+    position: absolute;
+    top: 50%;
+    width: 3em;
+    /* -webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25)); */
+    /* button {
+        background-color: #fff;
+        background-image: -webkit-linear-gradient(hsla(0,0%,0%,0), hsla(0,0%,0%,.1));
+        border-radius: 1em;
+        box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.5);
+        display: inline-block;
+        height: 1em;
+        left: 50%;
+        margin-left: -1.5em;
+        position: absolute;
+        top: 50%;
+        width: 3em;
+        -webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25));
+    }
+   button:after,
+   button:before {
+        background-color: #fff;
+        content: '';
+        border-radius: 100%;
+        position: absolute;
+    }
+  button:after {
+        background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 50%, hsla(0,0%,0%,.025));
+        height: 1em;
+        right: .4em;
+        top: -.5em;
+        width: 1em;
+    }
+    button:before {
+        background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 50%, hsla(0,0%,0%,.075));
+        height: 1.6em;
+        left: .4em;
+        top: -.75em;
+        width: 1.6em;
+    }  */
