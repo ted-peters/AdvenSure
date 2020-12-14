@@ -12,6 +12,7 @@ function Login() {
   const [loginPassword, setLoginPassword] = useState("");
   const [isLoggedin, setIsLoggedIn] = useState();
   const [fadeIn, setFadeIn] = useState(true);
+
   const refreshPage = () => {
     window.location.href = "/user";
   }
@@ -32,6 +33,7 @@ function Login() {
       login();    
     } 
   }
+  
   return (
     <div className="loginBody">
         <div className="container text-center">
@@ -40,7 +42,6 @@ function Login() {
             <Fade in={fadeIn} tag="h5" className="mt-3">
               <h1>AdvenSure</h1>
               <p>Where opportunity meets preparation.</p>
-              
               </Fade>
             </div>
           </div>
@@ -67,15 +68,6 @@ function Login() {
 
       </div>
       <p className="text-center">Haven't created an account with us?<Link to="/register">Sign Up</Link></p>
-      {/* <Row>
-        <Container>
-          <Card className="card" body inverse style={{ backgroundColor: '#f1f5', borderColor: '#f1f5' }}>
-            <CardTitle className="font" >Get User</CardTitle>
-            <Button className="button" onClick={getUser}>Submit</Button>
-            {data ? <h1>Welcome Back: {data.username}</h1> : null}
-          </Card>
-        </Container>
-      </Row> */}
     </div>
   );
 }

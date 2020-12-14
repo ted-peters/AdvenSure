@@ -8,10 +8,9 @@ const bcrypt = require("bcryptjs");
 const session = require("express-session");
 const bodyParser = require("body-parser");
 const User = require("./models/user");
-const router = require("./routes");
+const routes = require("./routes");
 const app = express();
 require('dotenv').config();
-// const routes = require('./routes');
 //----------------------------------------- END OF IMPORTS---------------------------------------------------
 
 // .connect() function to connect either mongodb.com/atlas or localhost mongo database
@@ -97,7 +96,7 @@ app.get("/api/user", (req, res) => {
 });
 
 // express using router function which exporting from routes folder
-app.use(router);
+app.use(routes);
 //----------------------------------------- END OF ROUTES---------------------------------------------------
 //Start Server
 // .listen() function to run your domain name = advensure.com || advensure.herokuapp.com || advensure.github.io || localhost:3001

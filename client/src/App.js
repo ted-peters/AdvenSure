@@ -13,9 +13,9 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Weather from './pages/Weather/App';
 import Logout from './pages/Logout/logout';
-import Checklist from './pages/checklist/CheckList';
+import Checklist from './pages/Checklist/CheckList';
 import { useAuth, actions } from './utils/authState';
-import UserPage from './pages/UserPage'
+import UserPage from '../src/pages/Userpage/UserPage'
 import ErrorPage from './pages/ErrorPage/ErrorPage'
 
 
