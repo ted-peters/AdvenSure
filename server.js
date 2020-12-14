@@ -14,7 +14,7 @@ require('dotenv').config();
 //----------------------------------------- END OF IMPORTS---------------------------------------------------
 
 // .connect() function to connect either mongodb.com/atlas or localhost mongo database
-mongoose.connect(process.env.MONGODBURL || "mongodb://localhost/AdvenSure", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI|| "mongodb://localhost/AdvenSure", { useNewUrlParser: true, useUnifiedTopology: true });
 // to check status of your mongodb connection
 mongoose.connection.on('connected', function () { console.log("Mongo DB connected") });
 mongoose.connection.on('error', function (err) { console.error(err) });
