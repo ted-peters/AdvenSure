@@ -1,10 +1,8 @@
 # AdvenSure 
-<img src= "./suitcase.png">
+<img src= "client/src/assets/image/suitcase.png">
 
 ## About
-insert about
-
-
+Simple Vacation/travel app to help all travelers stay organized. They can save there trip location and dates for departure and return. Their user info is stored in MONGO Atlas but their trip information is currently stored locally. This app is not currently an installable proggessive web app, but will be in the future version so that users may access there information in the air, underground, or anywhere there may not be service. Version 2.0.0 is expected by Decemeber 15, 2020.
 
 ## Live Demo
 [AdvenSure](https://advensure.herokuapp.com)
@@ -20,19 +18,9 @@ REACT_APP_API_KEY = (Insert API Key)
 REACT_APP_ICON_URL = ‘https://openweathermap.org/img/w’
 
 ## Advensure 
-### Login 
-<img src= "./login.png">
 
 ### Create Account
-<img src= "./register.png">
-
-### Create a trip
-<img src= "./createTrip.png">
-
-### Weather
-
-### Packing List
-<img src= "./preList.png">
+<img src= "client/src/assets/image/register.png">
 
 ## Contributors
 [Mary Kathryn Holt](https://github.com/MaryKathryn0)
