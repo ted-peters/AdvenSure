@@ -8,6 +8,4 @@ const newTrip = new Schema({
     title: { type: String}
 });
 
-const Trip = mongoose.model("Trip", newTrip);
-
-module.exports = Trip;
+module.exports = mongoose.model("Trip", newTrip);
