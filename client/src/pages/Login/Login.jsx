@@ -10,7 +10,6 @@ import { Fade } from "reactstrap";
 function Login() {
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
-  const [isLoggedin, setIsLoggedIn] = useState();
   const [fadeIn, setFadeIn] = useState(true);
 
   const refreshPage = () => {
@@ -33,7 +32,7 @@ function Login() {
       login();    
     } 
   }
-  
+
   return (
     <div className="loginBody">
         <div className="container text-center">
@@ -50,7 +49,7 @@ function Login() {
             <CardTitle className="font" style={{ borderRadius: '100px' }}>Welcome Back</CardTitle>
             <Input style={{ borderRadius: '100px' }}
               className="input"
-              placeholder="email"
+              placeholder="username"
               onChange={(e) => setLoginUsername(e.target.value)}
             />
             <Input style={{ borderRadius: '100px' }}
@@ -65,7 +64,6 @@ function Login() {
             </row>
           </Card>
         </Row>
-
       </div>
       <p className="text-center">Haven't created an account with us?<Link to="/register">Sign Up</Link></p>
     </div>
