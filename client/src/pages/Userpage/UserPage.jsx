@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
   Link,
   useParams,
-} from "react-router-dom";
-import axios from 'axios';
+} 
+from "react-router-dom";
 import './UserPage.css';
 
 const Example = (props) => {

@@ -1,24 +1,33 @@
 import React from "react";
 import { NavbarBrand } from "reactstrap";
 import asLogo from "../../asLogo.png";
-
-import { Link } from "react-router-dom";
+import axios from 'axios';
 import "./Nav.css";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
 } from "react-router-dom";
+
 
 function Nav() {
 
   const refreshPage = () => {
-    window.location.href = "/login";
+    window.location.href= "/login";
+  }
+
+  const logout = () => {
+    axios({
+      method: "GET",
+      url: "/logout",
+    }).then(()=> refreshPage());
   };
+
+
   const userPage = () => {
     window.location.href = "/user";
   };
+  
   return (
     <Router>
       <nav className="navbar navbar-expand-lg text-light">
@@ -44,7 +53,7 @@ function Nav() {
                       boxShadow:
                         "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",
                     }}
-                    onClick={refreshPage}
+                    onClick={logout}
                   >
                     Logout
                   </button>
@@ -85,7 +94,7 @@ function Nav() {
                       boxShadow:
                         "-1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb, -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;",
                     }}
-                    onClick={refreshPage}
+                    onClick={logout}
                   >
                     Logout
                   </button>
