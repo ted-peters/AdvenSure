@@ -12,10 +12,10 @@ import Footer from './comp/Footer/Footer';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Weather from './pages/Weather/App';
+import Checklist from './pages/Checklist/checklist'
 import { useAuth, actions } from './utils/authState';
 import UserPage from './pages/Userpage/UserPage'
 import ErrorPage from './pages/ErrorPage/ErrorPage'
-
 
 export default function App() {
   const [authState, authDispatch] = useAuth();
@@ -32,7 +32,6 @@ export default function App() {
       })
     })
   }, []);
-
   return (
     <div>
       <Router>
@@ -62,6 +61,9 @@ export default function App() {
             </Route>
             <Route path="/register">
               <Register />
+            </Route>
+            <Route path="/checklist">
+              <Checklist />
             </Route>
             <Route path="/weather">
               <Weather />
