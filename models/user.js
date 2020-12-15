@@ -18,6 +18,10 @@ const user = new mongoose.Schema({
     required: true,
     validate: [({ length }) => length >= 6, "Password should be longer."]
   },
+  date: {
+    type: Date,
+    default: Date.now
+  },
   trips:[{
     tripId: {
       type: mongoose.SchemaTypes.ObjectId,
