@@ -64,9 +64,9 @@ export default function App() {
             <Route path="/register">
               <Register />
             </Route>
-            <Route path="/checklist">
+            {/* <Route path="/checklist">
               <Checklist />
-            </Route>
+            </Route> */}
             <Route path="/weather">
               <Weather />
             </Route>
