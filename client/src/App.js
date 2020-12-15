@@ -12,7 +12,7 @@ import Footer from './comp/Footer/Footer';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Weather from './pages/Weather/App';
-import Checklist from './pages/Checklist/CheckList';
+import Checklist from './pages/Checklist/checkList';
 import { useAuth, actions } from './utils/authState';
 import UserPage from './pages/Userpage/UserPage'
 import ErrorPage from './pages/ErrorPage/ErrorPage'

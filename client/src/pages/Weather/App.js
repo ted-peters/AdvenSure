@@ -3,7 +3,8 @@ import { createMuiTheme, Container, ThemeProvider } from "@material-ui/core";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Weather from "./Weather";
-import Nav from "../../comp/Nav/Nav"
+require('dotenv').config();
+
 
 export default function App() {
   const [city, setCity] = useState("Austin");
