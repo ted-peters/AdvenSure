@@ -5,7 +5,7 @@
 Simple Vacation/travel app to help all travelers stay organized. They can save there trip location and dates for departure and return. Their user info is stored in MONGO Atlas but their trip information is currently stored locally. This app is not currently an installable proggessive web app, but will be in the future version so that users may access there information in the air, underground, or anywhere there may not be service. Version 2.0.0 is expected by Decemeber 15, 2020.
 
 ## Live Demo
-[AdvenSure](https://advensure.herokuapp.com)
+[AdvenSure](https://advensurez.herokuapp.com/)
 
 ## Getting Started
 - Sign up to get an API key for weather functionality at openweathermap.org
