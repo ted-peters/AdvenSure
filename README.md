@@ -8,14 +8,16 @@ Pack everything you need with this personal personal assistant.
 [AdvenSure](https://advensurez.herokuapp.com/)
 
 ## Getting Started
-- Sign up to get an API key for weather functionality at openweathermap.org
-- Fork the project and clone it locally
-- Create a file at the root and client folder of the project called .env and add the following contents:
+- Sign up to get an API key for weather functionality at [open weather map]("https://home.openweathermap.org/users/sign_up")
+- clone the repository https://github.com/Drop-G/AdvenSure.git
+- npm install (yarn is not supported)
 
-MONGODBURL = (Insert Personal Mongo Atlas Information)
-REACT_APP_API_URL = ‘https://api.openweathermap.org/data/2.5’
-REACT_APP_API_KEY = (Insert API Key)
-REACT_APP_ICON_URL = ‘https://openweathermap.org/img/w’
+Include these variables in your .env file 
+
+* MONGODBURL = (Insert Personal Mongo Atlas Information)
+* REACT_APP_API_URL = ‘https://api.openweathermap.org/data/2.5’
+* REACT_APP_API_KEY = (Insert API Key)
+* REACT_APP_ICON_URL = ‘https://openweathermap.org/img/w’
 
 ## Advensure 
 
