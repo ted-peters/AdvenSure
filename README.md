@@ -2,7 +2,7 @@
 <img src= "client/src/assets/image/suitcase.png">
 
 ## About
-Pack everything you need with this personal personal assistant.
+Pack everything you need with this personal assistant.
 
 ## Live Demo
 [AdvenSure](https://advensurez.herokuapp.com/)
